@@ -14,7 +14,7 @@ public class Shape : MonoBehaviour
         rb = transform.parent.GetComponent<Rigidbody>(); 
         grounded = GameObject.Find("1_Grounded").GetComponent<Grounded>();
     }
-    public void Move(Vector3 direction){
+    public virtual void Move(Vector3 direction){
         rb.Move(rb.position + (direction * Speed), rb.rotation); 
     }
 

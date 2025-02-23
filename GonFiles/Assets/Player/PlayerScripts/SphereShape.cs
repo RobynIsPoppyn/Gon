@@ -31,5 +31,15 @@ public class SphereShape : Shape
         
     }
 
+    public override void Open(){
+        anim.Play("SphereOpen");
+    }
+
+    public override void Close(){
+        anim.Play("SphereClose");
+    }
+
+
+
 
 }

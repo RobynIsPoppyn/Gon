@@ -15,7 +15,9 @@ public class PlayerMovement : MonoBehaviour
        
         currShape = AvailShapes[0]; 
         currShapeIndex = 0;
+        Invoke("CallOpen", 0.1f);
     }
+    
 
     // Update is called once per frame
     void FixedUpdate()
@@ -28,15 +30,25 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)){
-            currShapeIndex = currShapeIndex + 1 >= AvailShapes.Length ? 0 : ++currShapeIndex; 
-            currShape = AvailShapes[currShapeIndex];
-            print("Switched");
-        }
+            Shift();
+        }   
 
         if (Input.GetKeyDown(KeyCode.Space)){
             print("Action");
             currShape.Action();
         }
+    }
+
+    public void Shift(){
+        currShape.Close();
+        currShapeIndex = currShapeIndex + 1 >= AvailShapes.Length ? 0 : ++currShapeIndex; 
+        currShape = AvailShapes[currShapeIndex];
+        print("Switched");
+        
+    }
+
+    public void CallOpen(){
+        currShape.Open();
     }
     
 }

@@ -15,7 +15,8 @@ public class SphereShape : Shape
         rb.AddForce(new Vector3(0, jumpForce, 0));
     }
 
-    public override void Move(Vector3 direction){
+    public override void Move(Vector3 direction, bool curr3D){
+        direction = check3D(direction, curr3D);
         if (!(rb.velocity.x >= horizontalSpeedCap || rb.velocity.z >= horizontalSpeedCap)){
             rb.AddForce(direction * Speed * sphereSpeedModifier);
             if (rb.velocity.x / Input.GetAxis("Horizontal") < 0){

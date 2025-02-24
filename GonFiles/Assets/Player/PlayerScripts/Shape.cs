@@ -17,8 +17,8 @@ public class Shape : MonoBehaviour
         grounded = GameObject.Find("1_Grounded").GetComponent<Grounded>();
         anim = transform.parent.GetComponent<Animator>();
     }
-    public virtual void Move(Vector3 direction){
-        rb.Move(rb.position + (direction * Speed), rb.rotation); 
+    public virtual void Move(Vector3 direction, bool curr3D){
+        rb.Move(rb.position + (check3D(direction, curr3D) * Speed), rb.rotation); 
     }
 
     public virtual void Action(){
@@ -31,6 +31,13 @@ public class Shape : MonoBehaviour
 
     public virtual void Open(){
         print("Default open animation");
+    }
+
+    public Vector3 check3D(Vector3 direction, bool curr3D){
+        if (!curr3D) {
+            direction = new Vector3(direction.x, direction.y, 0); 
+        }
+        return direction;
     }
 
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : ShiftZ
 {
     
     public Shape[] AvailShapes; //Shapes the player can swapp too
@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        base.Start();
         currShape = AvailShapes[0]; 
         currShapeIndex = 0;
         Invoke("CallOpen", 0.1f);
@@ -23,14 +23,14 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         
-
-        currShape.Move(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
+        base.FixedUpdate();
+        currShape.Move(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")), Camera.main.GetComponent<PerspectiveShift>().curr3D);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)){
-            Shift();
+            Switch();
         }   
 
         if (Input.GetKeyDown(KeyCode.Space)){
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Shift(){
+    public void Switch(){
         currShape.Close();
         currShapeIndex = currShapeIndex + 1 >= AvailShapes.Length ? 0 : ++currShapeIndex; 
         currShape = AvailShapes[currShapeIndex];

@@ -9,7 +9,7 @@ public class PerspectiveShift : MonoBehaviour
 
     void Start()
     {
-        curr3D = false;
+        curr3D = !Camera.main.orthographic;
         anim = transform.GetComponent<Animator>();
     }
 
@@ -17,22 +17,34 @@ public class PerspectiveShift : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)){
-            if (curr3D) PlayTransition("Def2DSwitchTO"); 
-            else PlayTransition("Def3DSwitchTO"); 
+            if (curr3D) PlayTransition("Def2DSwitchTO", false); 
+            else PlayTransition("Def3DSwitchTO", true); 
         }
     }
 
     public void Switch2D(){
         Camera.main.orthographic = true;
         curr3D = false;
+        foreach(ShiftZ x in ShiftZ.allShiftZ){
+                x.beginShift();
+            }
     }
 
     public void Switch3D(){
         Camera.main.orthographic = false; 
         curr3D = true;
+        foreach(ShiftZ x in ShiftZ.allShiftZ){
+                x.resetShift();
+        }
     }
 
-    public void PlayTransition(string animName){ //Don't include base layer
+    public void PlayTransition(string animName, bool going3D){ //Don't include base layer
         anim.Play("Base Layer." + animName);
+        if (!going3D){
+            
+        }
+        else{
+            
+        }
     }
 }

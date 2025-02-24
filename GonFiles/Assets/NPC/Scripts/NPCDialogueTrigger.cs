@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NPCDialogueTrigger2D : MonoBehaviour
+public class NPCDialogueTrigger : MonoBehaviour
 {
     public GameObject dialogueUI;
 
@@ -10,17 +10,17 @@ public class NPCDialogueTrigger2D : MonoBehaviour
         dialogueUI.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             dialogueUI.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             dialogueUI.SetActive(false);
         }

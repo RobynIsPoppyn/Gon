@@ -21,11 +21,11 @@ public class SphereShape : Shape
             rb.AddForce(direction * Speed * sphereSpeedModifier);
             if (rb.velocity.x / Input.GetAxis("Horizontal") < 0){
                 rb.AddForce(new Vector3(direction.x * deacceleration, 0, 0));
-                print("going backwards hor");
+                
             }
             if (rb.velocity.z / Input.GetAxis("Vertical") < 0) {
                 rb.AddForce(new Vector3(0, 0, direction.z * deacceleration));
-                print("going backwards vert");
+                
             }
         }
 

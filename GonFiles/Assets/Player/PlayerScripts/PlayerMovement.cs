@@ -10,7 +10,7 @@ public class PlayerMovement : ShiftZ
     public int currShapeIndex; 
     public Shape currShape; 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         base.Start();
         currShape = AvailShapes[0]; 
@@ -20,11 +20,17 @@ public class PlayerMovement : ShiftZ
     
 
     // Update is called once per frame
-    void FixedUpdate()
+    protected override void FixedUpdate()
     {
         
         base.FixedUpdate();
         currShape.Move(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")), Camera.main.GetComponent<PerspectiveShift>().curr3D);
+        if (Camera.main.GetComponent<PerspectiveShift>().curr3D){
+            currShape.Switch3D();
+        }
+        else {
+            currShape.Switch2D();
+        }
     }
 
     void Update()

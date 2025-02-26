@@ -11,7 +11,7 @@ public class ShiftZ : MonoBehaviour
     bool shifting;
     protected Rigidbody rb;
 
-    protected void Start(){
+    protected virtual void Start(){
         targetZ = -5f;
         if (allShiftZ == null){
             allShiftZ = new List<ShiftZ>();
@@ -19,12 +19,7 @@ public class ShiftZ : MonoBehaviour
         allShiftZ.Add(this);
         rb = transform.GetComponent<Rigidbody>(); 
     }
-    protected void FixedUpdate(){
-        if (shifting){
-            
-            
-            
-        }
+    protected virtual void FixedUpdate(){
     }
 
     public void beginShift(){
@@ -33,11 +28,17 @@ public class ShiftZ : MonoBehaviour
         shifting = true;
         transform.position = new Vector3(transform.position.x, transform.position.y, 
                                             targetZ);
+        if (rb != null){
+            rb.constraints = RigidbodyConstraints.FreezePositionZ | 
+                                RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+        }
     }
     public void resetShift(){
         shifting = false;
         transform.position = new Vector3(transform.position.x, transform.position.y, z3D);
-
+        if (rb != null){
+            rb.constraints = RigidbodyConstraints.None;
+        }
         
     }
 }

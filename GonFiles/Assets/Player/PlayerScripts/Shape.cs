@@ -12,13 +12,13 @@ public class Shape : MonoBehaviour
 
 
 
-    public void Start(){
+    public virtual void Start(){
         rb = transform.parent.GetComponent<Rigidbody>(); 
         grounded = GameObject.Find("1_Grounded").GetComponent<Grounded>();
         anim = transform.parent.GetComponent<Animator>();
     }
     public virtual void Move(Vector3 direction, bool curr3D){
-        rb.Move(rb.position + (check3D(direction, curr3D) * Speed), rb.rotation); 
+        return;
     }
 
     public virtual void Action(){
@@ -38,6 +38,13 @@ public class Shape : MonoBehaviour
             direction = new Vector3(direction.x, direction.y, 0); 
         }
         return direction;
+    }
+
+    public virtual void Switch2D(){
+        rb.constraints = RigidbodyConstraints.FreezePositionZ;
+    }
+    public virtual void Switch3D(){
+        rb.constraints = RigidbodyConstraints.None;
     }
 
 }

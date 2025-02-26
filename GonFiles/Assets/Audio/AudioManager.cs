@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -40,6 +40,20 @@ public class AudioManager : MonoBehaviour
         LoadVolume("uiVolume", "Ui");
 
         musicSource.clip = bgm;
+        musicSource.Play();
+    }
+
+    // Change BGM
+    public void ChangeBGM(AudioClip newBgm)
+    {
+        musicSource.Stop();
+        musicSource.clip = newBgm;
+        StartCoroutine(PlayAfterDelay(17.5f));
+    }
+
+    private IEnumerator PlayAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         musicSource.Play();
     }
 

@@ -16,11 +16,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button quitBtn;
 
     private int transitionDuration = 4;
+    public static MainMenu instance;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame

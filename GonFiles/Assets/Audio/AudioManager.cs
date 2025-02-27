@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator PlayAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSecondsRealtime(delay);
         musicSource.Play();
     }
 

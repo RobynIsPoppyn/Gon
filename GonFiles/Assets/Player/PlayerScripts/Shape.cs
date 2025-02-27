@@ -9,6 +9,7 @@ public class Shape : MonoBehaviour
     public Grounded grounded;
 
     public Animator anim; 
+    protected Vector3 _fanPower;
 
 
 
@@ -16,6 +17,7 @@ public class Shape : MonoBehaviour
         rb = transform.parent.GetComponent<Rigidbody>(); 
         grounded = GameObject.Find("1_Grounded").GetComponent<Grounded>();
         anim = transform.parent.GetComponent<Animator>();
+        _fanPower = new Vector3(0, 0, 0);
     }
     public virtual void Move(Vector3 direction, bool curr3D){
         return;
@@ -45,6 +47,15 @@ public class Shape : MonoBehaviour
     }
     public virtual void Switch3D(){
         rb.constraints = RigidbodyConstraints.None;
+    }
+
+    public void FanAffect(Fan origin){
+        print("added fan power");
+        _fanPower += new Vector3(origin.XForce, origin.YForce, origin.ZForce);
+    }
+    public void FanLeave(Fan origin){
+        print("subtracted fan power");
+        _fanPower -= new Vector3(origin.XForce, origin.YForce, origin.ZForce);
     }
 
 }

@@ -9,6 +9,7 @@ public class SphereShape : Shape
     public float sphereSpeedModifier = 1f;
     public float horizontalSpeedCap = 50f;
     public float deacceleration = 1f;
+    public float fanWeight = 1f;
 
     public override void Action(){
         if (grounded.isGrounded)
@@ -32,12 +33,21 @@ public class SphereShape : Shape
         
     }
 
+    public void FixedUpdate(){
+        rb.AddForce(fanWeight * _fanPower);
+        print(_fanPower);
+    }
+
     public override void Open(){
         anim.Play("SphereOpen");
     }
 
     public override void Close(){
         anim.Play("SphereClose");
+    }
+
+    public void ApplyFanForce(Fan fan){
+    
     }
 
 

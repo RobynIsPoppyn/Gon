@@ -10,6 +10,7 @@ public class PlayerMovement : ShiftZ
     public int currShapeIndex; 
     public Shape currShape; 
     public bool capableOfBreaking; 
+    
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -60,6 +61,15 @@ public class PlayerMovement : ShiftZ
 
     public void CallOpen(){
         currShape.Open();
+    }
+
+
+    private Dictionary<Fan, Vector3> addedForcePerFan = new Dictionary<Fan, Vector3>();
+    public void FanEnter(Fan fan){
+        currShape.FanAffect(fan);
+    }
+    public void FanExit(Fan fan){
+        currShape.FanLeave(fan);
     }
     
 }

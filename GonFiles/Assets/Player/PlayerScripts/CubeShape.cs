@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeShape : Shape
 {
     public override void Open(){
-        print("Cube Open");
+        
         anim.Play("Base Layer.CubeOpen");
         StartCoroutine(OpenHelper());
         if (!Camera.main.GetComponent<PerspectiveShift>().curr3D)
@@ -21,9 +21,11 @@ public class CubeShape : Shape
         anim.Play("Base Layer.CubeClose");
     }
     public override void Action(){
-        print("smashing");
-        rb.velocity = Vector3.zero; 
-        smashing = true;
+    
+        if (!grounded.isGrounded){
+            rb.velocity = Vector3.zero; 
+            smashing = true;
+        }
     }
 
     public override void Switch2D(){
@@ -56,12 +58,14 @@ public class CubeShape : Shape
     public void Update(){
         
         if (rb.velocity.y > smashThreshold){
+            //print("reached threshold");
             thresholdReached = true;
         }
-        else {thresholdReached = false;}
+        
 
         if (grounded.isGrounded && smashing){
             smashing = false;
+            thresholdReached = false;
         }
         else if (smashing){
             rb.AddForce(0, -1 * downwardForce, 0);

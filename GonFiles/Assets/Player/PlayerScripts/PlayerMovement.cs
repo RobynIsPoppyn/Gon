@@ -9,6 +9,7 @@ public class PlayerMovement : ShiftZ
     
     public int currShapeIndex; 
     public Shape currShape; 
+    public bool capableOfBreaking; 
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -40,16 +41,20 @@ public class PlayerMovement : ShiftZ
         }   
 
         if (Input.GetKeyDown(KeyCode.Space)){
-            print("Action");
+            
             currShape.Action();
         }
+        if (currShape.GetComponent<CubeShape>() != null){
+            capableOfBreaking = currShape.GetComponent<CubeShape>().thresholdReached;
+        }
+        else capableOfBreaking = false;
     }
 
     public void Switch(){
         currShape.Close();
         currShapeIndex = currShapeIndex + 1 >= AvailShapes.Length ? 0 : ++currShapeIndex; 
         currShape = AvailShapes[currShapeIndex];
-        print("Switched");
+        
         
     }
 

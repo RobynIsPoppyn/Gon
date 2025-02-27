@@ -8,13 +8,13 @@ public class Grounded : MonoBehaviour
 
     void OnTriggerEnter(Collider collider){
         if (collider.tag.Equals("Ground")){
-            print("Grounded");
+            
             isGrounded = true;
         }
     }
     void OnTriggerExit(Collider collider){
         if (collider.tag.Equals("Ground")){
-            print("UnGrounded");
+           
             isGrounded = false;
         }
     }

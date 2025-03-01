@@ -6,17 +6,20 @@ public class PerspectiveShift : MonoBehaviour
 {
     public bool curr3D; //true if 3D, false if 2D
     Animator anim; 
-
+    
     void Start()
     {
         curr3D = !Camera.main.orthographic;
         anim = transform.GetComponent<Animator>();
+        
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)){
+        if (DevMode.ShiftButton && Input.GetKeyDown(KeyCode.F)){
             if (curr3D) PlayTransition("Def2DSwitchTO", false); 
             else PlayTransition("Def3DSwitchTO", true); 
         }

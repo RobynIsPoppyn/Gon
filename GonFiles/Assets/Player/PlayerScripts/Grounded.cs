@@ -18,5 +18,9 @@ public class Grounded : MonoBehaviour
             isGrounded = false;
         }
     }
+    public void Start(){
+            transform.GetComponent<MeshRenderer>().enabled = DevMode.GroundedMesh;
+        
+    }
 
 }

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     // Individual Elements to Hide
+    [SerializeField] private CanvasGroup menuCanvas;
     [SerializeField] private GameObject logo;
     [SerializeField] private Image bg;
     [SerializeField] private GameObject startBtn;
@@ -16,7 +17,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button quitBtn;
 
     private int transitionDuration = 4;
+    private int fadeInDuration = 1;
+    private bool isFaded = false;
+    private float fadeTimer = 0f;
     public static MainMenu instance;
+
 
     private void Awake()
     {
@@ -26,7 +31,17 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!isFaded)
+        {
+            fadeTimer += Time.deltaTime;
+            menuCanvas.alpha = Mathf.Lerp(1f, 0f, fadeTimer / 1f);
+
+            if (fadeTimer >= 1f)
+            {
+                menuCanvas.alpha = 0f;
+                isFaded = true;
+            }
+        }
     }
 
     // Play Logic

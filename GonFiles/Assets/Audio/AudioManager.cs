@@ -46,15 +46,28 @@ public class AudioManager : MonoBehaviour
     // Change BGM
     public void ChangeBGM(AudioClip newBgm)
     {
-        musicSource.Stop();
-        musicSource.clip = newBgm;
-        StartCoroutine(PlayAfterDelay(17.5f));
+        StartCoroutine(FadeSwitch(newBgm));
     }
 
-    private IEnumerator PlayAfterDelay(float delay)
+    private System.Collections.IEnumerator FadeSwitch(AudioClip newBgm)
     {
-        yield return new WaitForSecondsRealtime(delay);
+        float startVolume = musicSource.volume;
+
+        for (float i = 0; i < 2f; i += Time.deltaTime)
+        {
+            musicSource.volume = Mathf.Lerp(startVolume, 0, i / 2f);
+            yield return null;
+        }
+
+        musicSource.Stop();
+        musicSource.clip = newBgm;
         musicSource.Play();
+
+        for (float i = 0; i < 2; i+= Time.deltaTime)
+        {
+            musicSource.volume = Mathf.Lerp(0, startVolume, i / 2f);
+            yield return null;
+        }
     }
 
     private void LoadVolume(string playerKey, string mixerParam)
@@ -70,5 +83,10 @@ public class AudioManager : MonoBehaviour
     public void playSFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+
+    public void playUI(AudioClip clip)
+    {
+        uiSource.PlayOneShot(clip);
     }
 }

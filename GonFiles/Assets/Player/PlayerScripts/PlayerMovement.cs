@@ -8,7 +8,7 @@ public class PlayerMovement : ShiftZ
     public Shape[] AvailShapes; //Shapes the player can swapp too
     
     public int currShapeIndex; 
-    public Shape currShape; 
+    public Shape currShape{get; private set;}
     public bool capableOfBreaking; 
     
     // Start is called before the first frame update

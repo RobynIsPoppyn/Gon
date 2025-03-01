@@ -73,7 +73,7 @@ public class CubeShape : Shape
         
        // transform.parent.eulerAngles = new Vector3(transform.parent.eulerAngles.x,  
         //                                FaceInput() == -1 ? transform.parent.eulerAngles.y : FaceInput(), transform.parent.eulerAngles.z);
-       
+       print(_fanPower);
         
     }
 

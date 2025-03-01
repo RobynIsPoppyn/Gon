@@ -49,13 +49,11 @@ public class Shape : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
     }
 
-    public void FanAffect(Fan origin){
-        print("added fan power");
-        _fanPower += new Vector3(origin.XForce, origin.YForce, origin.ZForce);
+    public virtual void FanAffect(Fan origin){
+        
     }
-    public void FanLeave(Fan origin){
-        print("subtracted fan power");
-        _fanPower -= new Vector3(origin.XForce, origin.YForce, origin.ZForce);
+    public virtual void FanLeave(Fan origin){
+        
     }
 
 }

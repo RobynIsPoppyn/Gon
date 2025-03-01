@@ -13,7 +13,7 @@ public class SphereShape : Shape
 
     public override void Action(){
         if (grounded.isGrounded)
-        rb.AddForce(new Vector3(0, jumpForce, 0));
+            rb.AddForce(new Vector3(0, jumpForce, 0));
     }
 
     public override void Move(Vector3 direction, bool curr3D){
@@ -34,15 +34,18 @@ public class SphereShape : Shape
     }
 
     public void FixedUpdate(){
-        rb.AddForce(fanWeight * _fanPower);
+        if (transform.parent.GetComponent<PlayerMovement>().currShape.Equals(this))
+            rb.AddForce(fanWeight * _fanPower);
         print(_fanPower);
     }
 
     public override void Open(){
+        _fanPower = Vector3.zero;
         anim.Play("SphereOpen");
     }
 
     public override void Close(){
+        
         anim.Play("SphereClose");
     }
 
@@ -50,6 +53,14 @@ public class SphereShape : Shape
     
     }
 
+    public override void FanAffect(Fan origin){
+        print("added fan power");
+        _fanPower += new Vector3(origin.XForce, origin.YForce, origin.ZForce);
+    }
+    public override void FanLeave(Fan origin){
+        print("subtracted fan power");
+         _fanPower -= new Vector3(origin.XForce, origin.YForce, origin.ZForce);
+    }
 
 
 

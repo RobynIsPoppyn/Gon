@@ -6,7 +6,7 @@ public class Grounded : MonoBehaviour
 {
     public bool isGrounded;
 
-    void OnTriggerEnter(Collider collider){
+    void OnTriggerStay(Collider collider){
         if (collider.tag.Equals("Ground")){
             
             isGrounded = true;

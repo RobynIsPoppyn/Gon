@@ -18,19 +18,41 @@ public class CubeShape : Shape
     }
     public override void Close(){
       //  rb.constraints = RigidbodyConstraints.None; 
+        if (smashing)
+            SmashEnd();
         anim.Play("Base Layer.CubeClose");
     }
     public override void Action(){
     
         if (!grounded.isGrounded){
             rb.velocity = Vector3.zero; 
-            smashing = true;
+            SmashStart();
         }
     }
 
+    public void SmashStart(){
+        cubeMeshAnim.Play("Base Layer.CubeSmashStart");
+        smashing = true;
+    }
+    public void SmashEnd(){
+        
+        cubeMeshAnim.Play("Base Layer.CubeSmashEnd");
+        smashing = false;
+        thresholdReached = false;
+    }
+
+    public void Gravity(bool grav){
+        rb.useGravity = grav;
+    }
+
+    /*public void OnCollisionEnter(Collision collision){
+        if (collision.collider.tag == "Ground" && smashing){
+            SmashEnd();
+        }
+    }*/
+
     public override void Switch2D(){
-        
-        
+
         rb.constraints = RigidbodyConstraints.FreezePositionZ | 
                         RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; 
     }
@@ -64,8 +86,8 @@ public class CubeShape : Shape
         
 
         if (grounded.isGrounded && smashing){
-            smashing = false;
-            thresholdReached = false;
+            SmashEnd();
+            
         }
         else if (smashing){
             rb.AddForce(0, -1 * downwardForce, 0);

@@ -36,7 +36,7 @@ public class SphereShape : Shape
     public void FixedUpdate(){
         if (transform.parent.GetComponent<PlayerMovement>().currShape.Equals(this))
             rb.AddForce(fanWeight * _fanPower);
-        print(_fanPower);
+        
     }
 
     public override void Open(){

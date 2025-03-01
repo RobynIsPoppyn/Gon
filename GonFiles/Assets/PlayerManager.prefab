@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1271578046414295334}
   serializedVersion: 2
   m_LocalRotation: {x: 0.109228894, y: -0, z: -0, w: 0.99401665}
-  m_LocalPosition: {x: -956.5, y: -534.8295, z: -2.4685507}
+  m_LocalPosition: {x: -956.5, y: -535, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -139,7 +139,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1786590105094869321}
   - component: {fileID: 1713742562701993282}
-  - component: {fileID: 3398560114433061599}
   - component: {fileID: 2663049448915961716}
   - component: {fileID: 4240432549879813729}
   m_Layer: 0
@@ -173,48 +172,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698902920480708612}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3398560114433061599
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698902920480708612}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2663049448915961716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -253,7 +210,7 @@ MonoBehaviour:
   grounded: {fileID: 0}
   anim: {fileID: 0}
   thresholdReached: 0
-  smashThreshold: 5
+  smashThreshold: 1
   downwardForce: 100
   smashing: 0
 --- !u!1 &2737858313796799180
@@ -1107,6 +1064,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a33182be61d2967478c894267b734286, type: 3}
       insertIndex: -1
       addedObject: {fileID: 778393875833532999}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a33182be61d2967478c894267b734286, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7899996993460379118}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a33182be61d2967478c894267b734286, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6163193752268301588}
   m_SourcePrefab: {fileID: 100100000, guid: a33182be61d2967478c894267b734286, type: 3}
 --- !u!4 &5899899118252613782 stripped
 Transform:
@@ -1139,4 +1102,37 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 5157407077901123941, guid: a33182be61d2967478c894267b734286, type: 3}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &7899996993460379118
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533445777524931116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af982fb6f99ab104686032002e5875a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6163193752268301588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533445777524931116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f5d67c75df0924ca838b136eacc023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

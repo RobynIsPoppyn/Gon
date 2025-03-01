@@ -31,6 +31,8 @@ public class CubeShape : Shape
     }
 
     public void SmashStart(){
+        rb.rotation = Quaternion.Euler(rb.rotation.x, rb.rotation.y, 0);
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         cubeMeshAnim.Play("Base Layer.CubeSmashStart");
         smashing = true;
     }
@@ -43,6 +45,10 @@ public class CubeShape : Shape
 
     public void Gravity(bool grav){
         rb.useGravity = grav;
+    }
+
+    public void UnConstraint(){
+        rb.constraints = RigidbodyConstraints.None;
     }
 
     /*public void OnCollisionEnter(Collision collision){

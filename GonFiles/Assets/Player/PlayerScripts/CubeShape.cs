@@ -19,7 +19,7 @@ public class CubeShape : Shape
     public override void Close(){
       //  rb.constraints = RigidbodyConstraints.None; 
         if (smashing)
-            SmashEnd();
+            SmashEnd(false);
         anim.Play("Base Layer.CubeClose");
     }
     public override void Action(){
@@ -31,19 +31,28 @@ public class CubeShape : Shape
     }
 
     public void SmashStart(){
-        rb.rotation = Quaternion.Euler(rb.rotation.x, rb.rotation.y, 0);
+       
+        rb.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         cubeMeshAnim.Play("Base Layer.CubeSmashStart");
-        smashing = true;
-    }
-    public void SmashEnd(){
         
-        cubeMeshAnim.Play("Base Layer.CubeSmashEnd");
+    }
+    public void SmashEnd(bool ExecuteAnim){
+        
+       
+        print ("end");
+            cubeMeshAnim.Play("Base Layer.CubeSmashEnd");
+       
+            cubeMeshAnim.SetTrigger("SmashSlowStop");
+        
         smashing = false;
-        thresholdReached = false;
+       // thresholdReached = false;
     }
 
     public void Gravity(bool grav){
+        if (grav = true){
+            smashing = true;
+        }
         rb.useGravity = grav;
     }
 
@@ -85,14 +94,17 @@ public class CubeShape : Shape
     }
     public void Update(){
         
-        if (rb.velocity.y > smashThreshold){
-            //print("reached threshold");
+        if (rb.velocity.y < -1 * smashThreshold && smashing){
+            print("Threshold Reached");
             thresholdReached = true;
+        }
+        else {
+            thresholdReached = false;
         }
         
 
-        if (grounded.isGrounded && smashing){
-            SmashEnd();
+        if (grounded.isGrounded && smashing || !rb.useGravity && !thresholdReached && !smashing ){
+            SmashEnd(true);
             
         }
         else if (smashing){
@@ -101,7 +113,7 @@ public class CubeShape : Shape
         
        // transform.parent.eulerAngles = new Vector3(transform.parent.eulerAngles.x,  
         //                                FaceInput() == -1 ? transform.parent.eulerAngles.y : FaceInput(), transform.parent.eulerAngles.z);
-       print(_fanPower);
+       
         
     }
 

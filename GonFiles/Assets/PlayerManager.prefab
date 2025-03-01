@@ -210,7 +210,7 @@ MonoBehaviour:
   grounded: {fileID: 0}
   anim: {fileID: 0}
   thresholdReached: 0
-  smashThreshold: 5
+  smashThreshold: 1
   downwardForce: 100
   smashing: 0
 --- !u!1 &2737858313796799180

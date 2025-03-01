@@ -14,6 +14,9 @@ public class BreakableObject : MonoBehaviour
             }
             
             if (temp.GetComponent<PlayerMovement>().capableOfBreaking){
+                if (transform.GetComponent<ShiftZ>()){
+                    ShiftZ.allShiftZ.Remove(transform.GetComponent<ShiftZ>());
+                }
                 GameObject.Destroy(this.gameObject);
             }
         }

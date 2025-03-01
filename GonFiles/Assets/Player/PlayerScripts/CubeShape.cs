@@ -40,10 +40,10 @@ public class CubeShape : Shape
     public void SmashEnd(bool ExecuteAnim){
         
        
-        print ("end");
-            cubeMeshAnim.Play("Base Layer.CubeSmashEnd");
-       
-            cubeMeshAnim.SetTrigger("SmashSlowStop");
+        
+        cubeMeshAnim.Play("Base Layer.CubeSmashEnd");
+    
+        cubeMeshAnim.SetTrigger("SmashSlowStop");
         
         smashing = false;
        // thresholdReached = false;
@@ -95,7 +95,7 @@ public class CubeShape : Shape
     public void Update(){
         
         if (rb.velocity.y < -1 * smashThreshold && smashing){
-            print("Threshold Reached");
+          
             thresholdReached = true;
         }
         else {

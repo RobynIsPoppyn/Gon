@@ -24,7 +24,7 @@ public class ShiftZ : MonoBehaviour
 
     public void beginShift(){
         z3D = transform.position.z;
-        print(z3D);
+        
         shifting = true;
         transform.position = new Vector3(transform.position.x, transform.position.y, 
                                             targetZ);

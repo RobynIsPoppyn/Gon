@@ -28,6 +28,11 @@ public class MainMenu : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        player.GetComponent<PlayerMovement>().enabled = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +45,6 @@ public class MainMenu : MonoBehaviour
             {
                 menuCanvas.alpha = 0f;
                 isFaded = true;
-                player.GetComponent<PlayerMovement>().enabled = false;
             }
         }
     }

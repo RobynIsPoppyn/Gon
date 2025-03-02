@@ -6,6 +6,7 @@ public class ChapterTitle : MonoBehaviour
 {
     [SerializeField] string num;
     [SerializeField] string title;
+    [SerializeField] GameObject trigger;
     public TextMeshProUGUI chapterNumber;
     public TextMeshProUGUI chapterTitle;
 
@@ -17,6 +18,7 @@ public class ChapterTitle : MonoBehaviour
     private void Start()
     {
         ShowTitle(num, title);
+        Destroy(trigger);
     }
 
     public void ShowTitle(string number, string title)

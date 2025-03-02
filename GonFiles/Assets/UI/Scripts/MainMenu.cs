@@ -15,9 +15,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button settingsBtn;
     [SerializeField] private Button creditsBtn;
     [SerializeField] private Button quitBtn;
+    [SerializeField] public GameObject player;
 
-    private int transitionDuration = 4;
-    private int fadeInDuration = 1;
+    private int transitionDuration = 2;
     private bool isFaded = false;
     private float fadeTimer = 0f;
     public static MainMenu instance;
@@ -40,6 +40,7 @@ public class MainMenu : MonoBehaviour
             {
                 menuCanvas.alpha = 0f;
                 isFaded = true;
+                player.GetComponent<PlayerMovement>().enabled = false;
             }
         }
     }
@@ -83,6 +84,7 @@ public class MainMenu : MonoBehaviour
     // Destroy after starting game
     private void DestroySelf()
     {
+        player.GetComponent<PlayerMovement>().enabled = true;
         Destroy(gameObject);
     }
 }

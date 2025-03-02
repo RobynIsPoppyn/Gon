@@ -7,6 +7,20 @@ public class ParallaxBackground : MonoBehaviour
     public PerspectiveShift parallaxCamera;
     List<ParallaxLayer> parallaxLayers = new List<ParallaxLayer>();
 
+    private static ParallaxBackground instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         if (parallaxCamera == null)

@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-        Destroy(GameObject.Find("AudioMANAGER"));
+        Destroy(GameObject.Find("AudioManager"));
         SceneManager.LoadScene(0); // Loads the first scene and resets it back to the main menu state
         Resume();
     }

@@ -41,6 +41,8 @@ public class PerspectiveShift : MonoBehaviour
         }
     }
 
+    //public CallAnimation(string ani)
+    //asdfl
     public void PlayTransition(string animName){ //Don't include base layer
         anim.Play("Base Layer." + animName);
     }

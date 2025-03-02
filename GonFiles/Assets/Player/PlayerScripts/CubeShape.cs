@@ -24,7 +24,7 @@ public class CubeShape : Shape
     }
     public override void Action(){
     
-        if (!grounded.isGrounded){
+        if (!grounded.isGrounded && !smashing){
             rb.velocity = Vector3.zero; 
             SmashStart();
         }
@@ -86,6 +86,7 @@ public class CubeShape : Shape
     public float smashThreshold; 
     public float downwardForce;
     public bool smashing;
+    public float smashSpeedCap = 7f;
 
     public override void Start(){
         base.Start();
@@ -107,7 +108,7 @@ public class CubeShape : Shape
             SmashEnd(true);
             
         }
-        else if (smashing){
+        else if (smashing && rb.velocity.y < -1 * smashSpeedCap){
             rb.AddForce(0, -1 * downwardForce, 0);
         }
         

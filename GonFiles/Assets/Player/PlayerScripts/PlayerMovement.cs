@@ -10,6 +10,8 @@ public class PlayerMovement : ShiftZ
     public int currShapeIndex; 
     public Shape currShape{get; private set;}
     public bool capableOfBreaking; 
+
+    public static PlayerMovement instance;
     
     // Start is called before the first frame update
     protected override void Start()
@@ -20,6 +22,19 @@ public class PlayerMovement : ShiftZ
         Invoke("CallOpen", 0.1f);
     }
     
+
+     private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Update is called once per frame
     protected override void FixedUpdate()

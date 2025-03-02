@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class CubeShape : Shape
 {
+
+    public bool thresholdReached; 
+    public float smashThreshold; 
+    public float downwardForce;
+    public bool smashing;
+    public float smashSpeedCap = 7f;
+
+    
+
     public override void Open(){
         
         anim.Play("Base Layer.CubeOpen");
@@ -14,7 +23,7 @@ public class CubeShape : Shape
     }
     IEnumerator OpenHelper(){
         yield return new WaitForSeconds(0.02f); 
-        //cubeMeshAnim.Play("Base Layer.CubeIdle");
+        cubeMeshAnim.Play("Base Layer.CubeDefault");
     }
     public override void Close(){
       //  rb.constraints = RigidbodyConstraints.None; 
@@ -58,9 +67,10 @@ public class CubeShape : Shape
 
     public void UnConstraint(){ //Called by ending smash
         if (PerspectiveShift.curr3D){
-            Switch3D();
+            rb.constraints = RigidbodyConstraints.None;
         }
-        else Switch2D(); //Lazy solution, change me if you ever add to Switch 2d/3d
+        else {rb.constraints = RigidbodyConstraints.FreezePositionZ | 
+                        RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; } //Lazy solution, change me if you ever add to Switch 2d/3d
     }
 
     /*public void OnCollisionEnter(Collision collision){
@@ -73,9 +83,11 @@ public class CubeShape : Shape
 
         rb.constraints = RigidbodyConstraints.FreezePositionZ | 
                         RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; 
+        renderer.material = materials[0];
     }
     public override void Switch3D(){
         rb.constraints = RigidbodyConstraints.None;
+        renderer.material = materials[1];
     }
 
     private Animator cubeMeshAnim;
@@ -85,11 +97,7 @@ public class CubeShape : Shape
     }
 
 
-    public bool thresholdReached; 
-    public float smashThreshold; 
-    public float downwardForce;
-    public bool smashing;
-    public float smashSpeedCap = 7f;
+    
 
     public override void Start(){
         base.Start();

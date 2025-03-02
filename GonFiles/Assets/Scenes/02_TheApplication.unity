@@ -923,6 +923,7 @@ Transform:
   m_Children:
   - {fileID: 673618291}
   - {fileID: 1592663043}
+  - {fileID: 1660869207}
   m_Father: {fileID: 782811601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &625810938
@@ -1268,7 +1269,7 @@ Transform:
   m_GameObject: {fileID: 782811600}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 136.37381, y: -108.309204, z: -428.1272}
+  m_LocalPosition: {x: 123.3, y: -108.309204, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2982,11 +2983,11 @@ Transform:
   m_GameObject: {fileID: 1660869203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 158.92, y: -226.9, z: -427.4492}
+  m_LocalPosition: {x: 35.619995, y: -118.59079, z: 0.7}
   m_LocalScale: {x: 101.668, y: 13.76238, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 620382350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707977724
 GameObject:
@@ -4274,15 +4275,15 @@ PrefabInstance:
       objectReference: {fileID: 625810939}
     - target: {fileID: 7284586282287342569, guid: f5204e9e50a2f5f4e890357dbf5266fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 137.47
+      value: 124.2
       objectReference: {fileID: 0}
     - target: {fileID: 7284586282287342569, guid: f5204e9e50a2f5f4e890357dbf5266fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -88.49
+      value: -100.4
       objectReference: {fileID: 0}
     - target: {fileID: 7284586282287342569, guid: f5204e9e50a2f5f4e890357dbf5266fe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -427.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7284586282287342569, guid: f5204e9e50a2f5f4e890357dbf5266fe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4355,5 +4356,4 @@ SceneRoots:
   - {fileID: 1762915511}
   - {fileID: 625810938}
   - {fileID: 782811601}
-  - {fileID: 1660869207}
   - {fileID: 175725442273992212}

@@ -36,12 +36,13 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isFaded)
-        {
-            fadeTimer += Time.deltaTime;
-            menuCanvas.alpha = Mathf.Lerp(1f, 0f, fadeTimer / 1f);
+        fadeTimer += Time.deltaTime;
 
-            if (fadeTimer >= 1f)
+        if (!isFaded && fadeTimer >= 0.2f)
+        {
+            menuCanvas.alpha = Mathf.Lerp(1f, 0f, (fadeTimer - 0.2f) / 2f);
+
+            if (fadeTimer >= 2.2f)
             {
                 menuCanvas.alpha = 0f;
                 isFaded = true;

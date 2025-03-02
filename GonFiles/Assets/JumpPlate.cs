@@ -5,6 +5,7 @@ public class JumpPlate : MonoBehaviour
 {
     private Animator animator;
     public float bounceForce = 10f;  // Adjustable bounce strength
+    public Rigidbody playerRB;
 
     private void Start()
     {
@@ -15,29 +16,26 @@ public class JumpPlate : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(SpringSequence(other));
+            StartCoroutine(SpringSequence());
         }
     }
 
-    private IEnumerator SpringSequence(Collider other)
+    private IEnumerator SpringSequence()
     {
-        animator.SetTrigger("WeighDown");
-        yield return new WaitForSeconds(0.1f);
+        //animator.SetTrigger("WeighDown");
+        //animator.SetTrigger("IdleDown");
 
-        animator.SetTrigger("IdleDown");
-        yield return new WaitForSeconds(0.2f);
+        animator.SetTrigger("Bounce");
 
         // Apply bounce force
-        Rigidbody rb = other.GetComponent<Rigidbody>();
+        Rigidbody rb = playerRB;
         if (rb != null)
         {
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z); // Reset vertical velocity before
             rb.AddForce(Vector3.up * bounceForce, ForceMode.Impulse);
         }
 
-        animator.SetTrigger("Bounce");
-        yield return new WaitForSeconds(0.2f);
-
-        animator.SetTrigger("IdleUp");
+        animator.SetTrigger("IdleDown");
+        yield return new WaitForSeconds(0f);
     }
 }

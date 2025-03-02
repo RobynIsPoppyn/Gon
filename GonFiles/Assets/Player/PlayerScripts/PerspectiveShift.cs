@@ -5,15 +5,17 @@ using UnityEngine;
 public class PerspectiveShift : MonoBehaviour
 {
     public bool curr3D; //true if 3D, false if 2D
-    Animator anim; 
-    
+    Animator anim;
+
+    public delegate void ParallaxCameraDelegate(float deltaMovement);
+    public ParallaxCameraDelegate onCameraTranslate;
+    private float oldPosition;
+
     void Start()
     {
         curr3D = !Camera.main.orthographic;
         anim = transform.GetComponent<Animator>();
-        
-        
-        
+        oldPosition = transform.position.x;
     }
 
     // Update is called once per frame
@@ -22,6 +24,17 @@ public class PerspectiveShift : MonoBehaviour
         if (DevMode.ShiftButton && Input.GetKeyDown(KeyCode.F)){
             if (curr3D) PlayTransition("Def2DSwitchTO"); 
             else PlayTransition("Def3DSwitchTO"); 
+        }
+
+        if (transform.position.x != oldPosition)
+        {
+            if (onCameraTranslate != null)
+            {
+                float delta = oldPosition - transform.position.x;
+                onCameraTranslate(delta);
+            }
+
+            oldPosition = transform.position.x;
         }
     }
 

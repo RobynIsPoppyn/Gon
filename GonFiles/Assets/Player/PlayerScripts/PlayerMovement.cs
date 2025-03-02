@@ -26,8 +26,8 @@ public class PlayerMovement : ShiftZ
     {
         
         base.FixedUpdate();
-        currShape.Move(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")), Camera.main.GetComponent<PerspectiveShift>().curr3D);
-        if (Camera.main.GetComponent<PerspectiveShift>().curr3D){
+        currShape.Move(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")), PerspectiveShift.curr3D);
+        if (PerspectiveShift.curr3D){
             currShape.Switch3D();
         }
         else {

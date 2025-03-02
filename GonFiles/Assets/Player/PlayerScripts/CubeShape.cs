@@ -8,7 +8,7 @@ public class CubeShape : Shape
         
         anim.Play("Base Layer.CubeOpen");
         StartCoroutine(OpenHelper());
-        if (!Camera.main.GetComponent<PerspectiveShift>().curr3D)
+        if (!PerspectiveShift.curr3D)
             rb.rotation = Quaternion.Euler(0, 0, rb.rotation.z);
         
     }
@@ -56,8 +56,11 @@ public class CubeShape : Shape
         rb.useGravity = grav;
     }
 
-    public void UnConstraint(){
-        rb.constraints = RigidbodyConstraints.None;
+    public void UnConstraint(){ //Called by ending smash
+        if (PerspectiveShift.curr3D){
+            Switch3D();
+        }
+        else Switch2D(); //Lazy solution, change me if you ever add to Switch 2d/3d
     }
 
     /*public void OnCollisionEnter(Collision collision){
@@ -101,6 +104,10 @@ public class CubeShape : Shape
         }
         else {
             thresholdReached = false;
+        }
+
+        if (PerspectiveShift.curr3D){
+
         }
         
 

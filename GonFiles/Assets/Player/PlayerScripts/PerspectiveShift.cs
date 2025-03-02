@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PerspectiveShift : MonoBehaviour
 {
-    public bool curr3D; //true if 3D, false if 2D
+    public static bool curr3D; //true if 3D, false if 2D
     Animator anim;
 
     public delegate void ParallaxCameraDelegate(float deltaMovement);

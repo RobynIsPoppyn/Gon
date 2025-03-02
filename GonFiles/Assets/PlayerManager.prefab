@@ -129,7 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4322ea8addecd7649aa3e88003dbd8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curr3D: 0
 --- !u!114 &1165377255927484613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,7 +409,7 @@ GameObject:
   - component: {fileID: 6765059293732763850}
   m_Layer: 0
   m_Name: CubeHitbox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -638,7 +637,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.3117892
+  m_Radius: 0.57
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6135865550817488382
 MonoBehaviour:

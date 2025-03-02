@@ -43,14 +43,14 @@ public class CubeShape : Shape
        
         rb.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-        cubeMeshAnim.Play("Base Layer.CubeSmashStart");
+        cubeMeshAnim.Play("Base Layer.CubePlunge");
         
     }
     public void SmashEnd(bool ExecuteAnim){
         
        
         
-        cubeMeshAnim.Play("Base Layer.CubeSmashEnd");
+        cubeMeshAnim.Play("Base Layer.CubeSmash");
     
         cubeMeshAnim.SetTrigger("SmashSlowStop");
         

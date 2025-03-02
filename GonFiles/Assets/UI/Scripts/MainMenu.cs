@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button creditsBtn;
     [SerializeField] private Button quitBtn;
     [SerializeField] private TextMeshProUGUI moveTip;
+    [SerializeField] private TextMeshProUGUI subtitle;
     [SerializeField] public GameObject player;
     [SerializeField] private ParticleSystem explosion;
     [SerializeField] private ParticleSystem logoParticles;
@@ -79,6 +80,9 @@ public class MainMenu : MonoBehaviour
 
         // Logo
         logo.CrossFadeAlpha(0, 1.5f, false);
+
+        // Subtitle
+        subtitle.CrossFadeAlpha(0, 1f, false);
 
         // moveTip
         moveTip.CrossFadeAlpha(1, 2, false);

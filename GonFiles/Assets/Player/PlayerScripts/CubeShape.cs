@@ -24,7 +24,7 @@ public class CubeShape : Shape
     }
     public override void Action(){
     
-        if (!grounded.isGrounded){
+        if (!grounded.isGrounded && !smashing){
             rb.velocity = Vector3.zero; 
             SmashStart();
         }

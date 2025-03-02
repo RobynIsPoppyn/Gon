@@ -20,8 +20,8 @@ public class PerspectiveShift : MonoBehaviour
     void Update()
     {
         if (DevMode.ShiftButton && Input.GetKeyDown(KeyCode.F)){
-            if (curr3D) PlayTransition("Def2DSwitchTO", false); 
-            else PlayTransition("Def3DSwitchTO", true); 
+            if (curr3D) PlayTransition("Def2DSwitchTO"); 
+            else PlayTransition("Def3DSwitchTO"); 
         }
     }
 
@@ -41,13 +41,9 @@ public class PerspectiveShift : MonoBehaviour
         }
     }
 
-    public void PlayTransition(string animName, bool going3D){ //Don't include base layer
+    //public CallAnimation(string ani)
+
+    public void PlayTransition(string animName){ //Don't include base layer
         anim.Play("Base Layer." + animName);
-        if (!going3D){
-            
-        }
-        else{
-            
-        }
     }
 }

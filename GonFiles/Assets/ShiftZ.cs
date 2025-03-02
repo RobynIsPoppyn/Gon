@@ -12,7 +12,7 @@ public class ShiftZ : MonoBehaviour
     protected Rigidbody rb;
 
     protected virtual void Start(){
-        targetZ = -5f;
+        targetZ = 0f;
         if (allShiftZ == null){
             allShiftZ = new List<ShiftZ>();
         }

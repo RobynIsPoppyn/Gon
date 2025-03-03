@@ -10,6 +10,7 @@ public class SphereShape : Shape
     public float horizontalSpeedCap = 50f;
     public float deacceleration = 1f;
     public float fanWeight = 1f;
+    public float friction = 5f;
 
     public override void Action(){
         if (grounded.isGrounded)
@@ -39,6 +40,13 @@ public class SphereShape : Shape
 
         if (!PerspectiveShift.curr3D && pm.currShape == this){
             rb.rotation = Quaternion.Euler(0, 0, pm.transform.eulerAngles.z);
+        }
+
+        if (Input.GetAxis("Horizontal") == 0 && rb.velocity.x != 0 && grounded){
+            rb.AddForce(new Vector3(-1 * rb.velocity.x * friction, 0, 0));
+        }
+        if (Input.GetAxis("Vertical") == 0 && rb.velocity.z != 0 && grounded){
+            rb.AddForce(new Vector3(0, 0, -1 * rb.velocity.z * friction));
         }
         
     }

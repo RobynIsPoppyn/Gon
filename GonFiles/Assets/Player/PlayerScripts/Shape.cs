@@ -14,7 +14,9 @@ public class Shape : MonoBehaviour
     public Material[] materials = new Material[2]; //First material is the 2D one
     public MeshRenderer renderer; 
 
+    public PlayerMovement pm; 
     public virtual void Start(){
+        pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
         renderer.material = materials[PerspectiveShift.curr3D ? 1 : 0];
         rb = transform.parent.GetComponent<Rigidbody>(); 
         grounded = GameObject.Find("1_Grounded").GetComponent<Grounded>();

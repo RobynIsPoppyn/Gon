@@ -273,11 +273,13 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 6443932c058ca664599c73fad56bd407, type: 2}
   - {fileID: 2100000, guid: e5f28f4b47f66af4eb626dd695c125b8, type: 2}
   renderer: {fileID: 4732027710472821753}
+  pm: {fileID: 0}
   thresholdReached: 0
   smashThreshold: 1
   downwardForce: 100
   smashing: 0
   smashSpeedCap: 2
+  cubeWeight: 1.75
 --- !u!1 &2737858313796799180
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +520,7 @@ Rigidbody:
   m_GameObject: {fileID: 4784599463664359444}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -839,6 +841,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c0651b7ed0c60c148ae64c3b81a9d27e, type: 2}
   - {fileID: 2100000, guid: 40e90895130a056479373b879285eb0c, type: 2}
   renderer: {fileID: 7029511402481549174}
+  pm: {fileID: 0}
   jumpForce: 300
   sphereSpeedModifier: 100
   horizontalSpeedCap: 10
@@ -1332,6 +1335,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9f0f98ec09ee3d54d9b49893e3012715, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9f0f98ec09ee3d54d9b49893e3012715, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 9f0f98ec09ee3d54d9b49893e3012715, type: 3}

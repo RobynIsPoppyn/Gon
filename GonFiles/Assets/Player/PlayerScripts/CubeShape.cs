@@ -62,7 +62,7 @@ public class CubeShape : Shape
     }
 
     public void Gravity(bool grav){
-        if (grav = true){
+        if (grav == true){
             smashing = true;
         }
         rb.useGravity = grav;

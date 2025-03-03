@@ -5,6 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject settingsUI;
 
     public static PauseMenu instance;
     private void Awake()
@@ -23,7 +24,12 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && MainMenu.instance == null)
+        if (Input.GetKeyUp(KeyCode.Escape) && settingsUI.activeSelf)
+        {
+            settingsUI.SetActive(false);
+            pauseMenuUI.SetActive(true);
+        } 
+        else if (Input.GetKeyDown(KeyCode.Escape) && MainMenu.instance == null && settingsUI.activeSelf == false)
         {
             if (isPaused)
             {

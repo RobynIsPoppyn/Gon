@@ -4391,6 +4391,10 @@ PrefabInstance:
       propertyPath: title
       value: The Application
       objectReference: {fileID: 0}
+    - target: {fileID: 1508453385158425583, guid: 65957cfa8d97bfd47addc079ab4ab8ae, type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 175725442273992213}
     - target: {fileID: 1656321374363735082, guid: 65957cfa8d97bfd47addc079ab4ab8ae, type: 3}
       propertyPath: m_Name
       value: LevelTitle
@@ -30115,6 +30119,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5204e9e50a2f5f4e890357dbf5266fe, type: 3}
+--- !u!1 &175725442273992213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2059763963499024350, guid: f5204e9e50a2f5f4e890357dbf5266fe, type: 3}
+  m_PrefabInstance: {fileID: 175725442273992212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5342099995557623268
 PrefabInstance:
   m_ObjectHideFlags: 0

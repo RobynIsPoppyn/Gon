@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Wassup
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4abd85a0e95bce54695897687900ad86, type: 2}
+  m_sharedMaterial: {fileID: -6553517143142503284, guid: 4abd85a0e95bce54695897687900ad86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -279,7 +279,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.02, y: 0.02, z: 0}
-  m_LocalScale: {x: 2.892046, y: 2.6540015, z: 2.892046}
+  m_LocalScale: {x: 4.04, y: 2.7897773, z: 3.04}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6584072249672877813}
@@ -353,7 +353,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.74
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &715115711798008524
 MonoBehaviour:
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e554fe8a523a2469002b7e67caa95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 8587087772041473557}
+  dialogueUI: {fileID: 3156429216868481823}
 --- !u!1001 &6689511957306745118
 PrefabInstance:
   m_ObjectHideFlags: 0

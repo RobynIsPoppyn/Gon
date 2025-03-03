@@ -1,28 +1,21 @@
 using UnityEngine;
+using TMPro;
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
-    public GameObject dialogueUI;
+    public TextMeshProUGUI dialogueUI;
 
     // Start is called before the first frame update
     void Start()
     {
-        dialogueUI.SetActive(false);
+        dialogueUI.CrossFadeAlpha(0f, 0f, false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            dialogueUI.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            dialogueUI.SetActive(false);
+            dialogueUI.CrossFadeAlpha(1f, 1f, false);
         }
     }
 }

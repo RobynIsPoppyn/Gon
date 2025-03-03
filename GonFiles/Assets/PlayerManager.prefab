@@ -272,7 +272,7 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: 6443932c058ca664599c73fad56bd407, type: 2}
   - {fileID: 2100000, guid: e5f28f4b47f66af4eb626dd695c125b8, type: 2}
-  renderer: {fileID: 4732027710472821753}
+  rend: {fileID: 4732027710472821753}
   pm: {fileID: 0}
   thresholdReached: 0
   smashThreshold: 1
@@ -840,7 +840,7 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: c0651b7ed0c60c148ae64c3b81a9d27e, type: 2}
   - {fileID: 2100000, guid: 40e90895130a056479373b879285eb0c, type: 2}
-  renderer: {fileID: 7029511402481549174}
+  rend: {fileID: 7029511402481549174}
   pm: {fileID: 0}
   jumpForce: 300
   sphereSpeedModifier: 100

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BreakableObject : ShiftZ
 {
+    public MeshRenderer rend; 
+    public Material[] materials; 
     void OnCollisionEnter(Collision collision){
         if (collision.collider.tag == "Player"){
             
@@ -24,4 +26,28 @@ public class BreakableObject : ShiftZ
             }
         }
     }
+
+    protected override void Start(){
+        base.Start();
+        rend = GetComponent<MeshRenderer>();
+        StartCoroutine(StartHelper());
+        
+        
+    }
+    private IEnumerator StartHelper(){
+        yield return new WaitForSeconds(0.02f);
+        
+        rend.material = materials[PerspectiveShift.curr3D ? 1 : 0];
+    }
+
+    public override void beginShift(){
+        base.beginShift();
+        rend.material = materials[0];
+    }
+     public override void resetShift(){
+        base.beginShift();
+        rend.material = materials[1];
+    }
+
+
 }

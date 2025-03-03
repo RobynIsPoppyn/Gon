@@ -22,7 +22,7 @@ public class ShiftZ : MonoBehaviour
     protected virtual void FixedUpdate(){
     }
 
-    public void beginShift(){
+    public virtual void beginShift(){
         z3D = transform.position.z;
         
         shifting = true;
@@ -33,7 +33,7 @@ public class ShiftZ : MonoBehaviour
                                 RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
         }
     }
-    public void resetShift(){
+    public virtual void resetShift(){
         shifting = false;
         transform.position = new Vector3(transform.position.x, transform.position.y, z3D);
         if (rb != null){

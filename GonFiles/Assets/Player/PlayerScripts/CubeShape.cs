@@ -86,11 +86,12 @@ public class CubeShape : Shape
 
         rb.constraints = RigidbodyConstraints.FreezePositionZ | 
                         RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; 
-        renderer.material = materials[0];
+        rend.material = materials[0];
     }
     public override void Switch3D(){
         rb.constraints = RigidbodyConstraints.None;
-        renderer.material = materials[1];
+        rend.material = materials[1];
+        //WTF
     }
 
     private Animator cubeMeshAnim;

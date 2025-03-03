@@ -12,17 +12,27 @@ public class Shape : MonoBehaviour
     protected Vector3 _fanPower;
 
     public Material[] materials = new Material[2]; //First material is the 2D one
-    public MeshRenderer renderer; 
+    public MeshRenderer rend; 
 
     public PlayerMovement pm; 
     public virtual void Start(){
         pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
-        renderer.material = materials[PerspectiveShift.curr3D ? 1 : 0];
+        //rend.material = materials[PerspectiveShift.curr3D ? 1 : 0];
         rb = transform.parent.GetComponent<Rigidbody>(); 
         grounded = GameObject.Find("1_Grounded").GetComponent<Grounded>();
         anim = transform.parent.GetComponent<Animator>();
         _fanPower = new Vector3(0, 0, 0);
+        StartCoroutine(StartHelper());
+        
+        
     }
+    protected IEnumerator StartHelper(){
+        yield return new WaitForSeconds(0.02f);
+        
+        rend.material = materials[PerspectiveShift.curr3D ? 1 : 0];
+    }
+
+
     public virtual void Move(Vector3 direction, bool curr3D){
         return;
     }
@@ -47,11 +57,11 @@ public class Shape : MonoBehaviour
     }
 
     public virtual void Switch2D(){
-        renderer.material = materials[0];
+        rend.material = materials[0];
         rb.constraints = RigidbodyConstraints.FreezePositionZ;
     }
     public virtual void Switch3D(){
-        renderer.material = materials[1];
+        rend.material = materials[1];
         rb.constraints = RigidbodyConstraints.None;
     }
 

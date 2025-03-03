@@ -12,7 +12,8 @@ public class CubeShape : Shape
     public float smashSpeedCap = 7f;
     public float cubeWeight = 2f;
     private float _defWeight = 1f; 
-    
+    public float torque = 1f;
+    public float torqueCap = 1f;
 
     public override void Open(){
         
@@ -40,6 +41,17 @@ public class CubeShape : Shape
             rb.velocity = Vector3.zero; 
             SmashStart();
         }
+    }
+
+    public override void Move(Vector3 direction, bool curr3D){
+        base.Move(direction, curr3D);
+        if (rb.angularVelocity.x < torqueCap){
+            rb.AddTorque(new Vector3(Input.GetAxis("Vertical") * torque * -1, 0, 0));
+        }
+        if (rb.angularVelocity.z < torqueCap){
+            rb.AddTorque(new Vector3(0, 0, Input.GetAxis("Horizontal") * torque * -1));
+        }
+            
     }
 
     public void SmashStart(){
@@ -95,10 +107,7 @@ public class CubeShape : Shape
     }
 
     private Animator cubeMeshAnim;
-    public override void Move(Vector3 direction, bool curr3D){
-        base.Move(direction, curr3D);
-        
-    }
+    
 
 
     

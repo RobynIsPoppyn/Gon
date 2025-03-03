@@ -7,10 +7,12 @@ public class SphereShape : Shape
      
     public float jumpForce = 10f; 
     public float sphereSpeedModifier = 1f;
+    public float torque = 1f;
     public float horizontalSpeedCap = 50f;
     public float deacceleration = 1f;
     public float fanWeight = 1f;
     public float friction = 5f;
+    
 
     public override void Action(){
         if (grounded.isGrounded)
@@ -28,8 +30,12 @@ public class SphereShape : Shape
             if (rb.velocity.z / Input.GetAxis("Vertical") < 0) {
                 rb.AddForce(new Vector3(0, 0, direction.z * deacceleration));
                 
+                
             }
         }
+        if (!grounded)
+            rb.AddTorque(new Vector3(Input.GetAxis("Vertical") * torque * -1, 0, Input.GetAxis("Horizontal") * torque * -1));
+            
 
         
     }

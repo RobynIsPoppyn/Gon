@@ -844,7 +844,7 @@ MonoBehaviour:
   pm: {fileID: 0}
   jumpForce: 300
   sphereSpeedModifier: 100
-  horizontalSpeedCap: 10
+  horizontalSpeedCap: 4
   deacceleration: 10
   fanWeight: 1
   friction: 2

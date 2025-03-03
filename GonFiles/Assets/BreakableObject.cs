@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakableObject : MonoBehaviour
+public class BreakableObject : ShiftZ
 {
     void OnCollisionEnter(Collision collision){
         if (collision.collider.tag == "Player"){
@@ -17,6 +17,9 @@ public class BreakableObject : MonoBehaviour
                 if (transform.GetComponent<ShiftZ>()){
                     ShiftZ.allShiftZ.Remove(transform.GetComponent<ShiftZ>());
                 }
+                transform.GetChild(0).gameObject.SetActive(true);
+                //transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+                transform.GetChild(0).parent = null;
                 GameObject.Destroy(this.gameObject);
             }
         }

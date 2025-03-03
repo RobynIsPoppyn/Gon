@@ -10,13 +10,15 @@ public class CubeShape : Shape
     public float downwardForce;
     public bool smashing;
     public float smashSpeedCap = 7f;
-
+    public float cubeWeight = 2f;
+    private float _defWeight = 1f; 
     
 
     public override void Open(){
         
         anim.Play("Base Layer.CubeOpen");
         StartCoroutine(OpenHelper());
+        rb.drag = cubeWeight;
         if (!PerspectiveShift.curr3D)
             rb.rotation = Quaternion.Euler(0, 0, rb.rotation.z);
         
@@ -30,6 +32,7 @@ public class CubeShape : Shape
         if (smashing)
             SmashEnd(false);
         anim.Play("Base Layer.CubeClose");
+        rb.drag = _defWeight;
     }
     public override void Action(){
     
@@ -100,7 +103,9 @@ public class CubeShape : Shape
     
 
     public override void Start(){
+        
         base.Start();
+        _defWeight = rb.drag;
         cubeMeshAnim = transform.GetChild(0).GetChild(0).GetComponent<Animator>();
 
     }
@@ -114,8 +119,8 @@ public class CubeShape : Shape
             thresholdReached = false;
         }
 
-        if (PerspectiveShift.curr3D){
-
+        if (!PerspectiveShift.curr3D && pm.currShape == this){
+            rb.rotation = Quaternion.Euler(0, 0, pm.transform.eulerAngles.z);
         }
         
 

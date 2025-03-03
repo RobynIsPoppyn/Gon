@@ -18,7 +18,7 @@ public class SphereShape : Shape
 
     public override void Move(Vector3 direction, bool curr3D){
         direction = check3D(direction, curr3D);
-        if (!(rb.velocity.x >= horizontalSpeedCap || rb.velocity.z >= horizontalSpeedCap)){
+        if (!(Mathf.Abs(rb.velocity.x) >= horizontalSpeedCap || Mathf.Abs(rb.velocity.z) >= horizontalSpeedCap)){
             rb.AddForce(direction * Speed * sphereSpeedModifier);
             if (rb.velocity.x / Input.GetAxis("Horizontal") < 0){
                 rb.AddForce(new Vector3(direction.x * deacceleration, 0, 0));
@@ -36,6 +36,10 @@ public class SphereShape : Shape
     public void FixedUpdate(){
         if (transform.parent.GetComponent<PlayerMovement>().currShape.Equals(this))
             rb.AddForce(fanWeight * _fanPower);
+
+        if (!PerspectiveShift.curr3D && pm.currShape == this){
+            rb.rotation = Quaternion.Euler(0, 0, pm.transform.eulerAngles.z);
+        }
         
     }
 

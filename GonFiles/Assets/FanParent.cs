@@ -10,9 +10,11 @@ public class FanParent : MonoBehaviour
     public float intervalOff = 2f;
     public bool FanOn{get; private set;}
     public Animator anim; 
+    private Vector3 m_saveScale;
+
     public void Start(){
         windZone = transform.GetChild(0).GetComponent<Fan>();
-
+        m_saveScale = transform.GetChild(0).localScale;
     }
     
     private float m_timePass = 0f;
@@ -38,8 +40,15 @@ public class FanParent : MonoBehaviour
         
         if (FanOn){
             anim.SetTrigger("turnOn");
+            windZone.ps.Play();
+            print("Starting wind");
         }
-        else anim.SetTrigger("turnOff");
+        else {
+            anim.SetTrigger("turnOff");
+            windZone.ps.Stop();
+            print("Stopping wind");
+        }
+
         
     }
 
@@ -47,12 +56,14 @@ public class FanParent : MonoBehaviour
         m_timePass = 0;
        m_reset = false;
         FanOn = false;
-        windZone.gameObject.SetActive(true);
+        windZone.transform.localScale = m_saveScale;
+        
     }
     public void TurnOff(){
        m_reset = false;
         m_timePass = 0;
         FanOn = true;
-        windZone.gameObject.SetActive(false);
+        windZone.transform.localScale = new Vector3(0, 0, 0);
+        
     }
 }

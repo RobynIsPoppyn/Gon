@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb059f2c96426045b333dfd07142d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intervalOn: 2
+  intervalOn: 4
   intervalOff: 2
   anim: {fileID: 7397234383576771726}
 --- !u!65 &4109125592837960644
@@ -5219,7 +5219,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

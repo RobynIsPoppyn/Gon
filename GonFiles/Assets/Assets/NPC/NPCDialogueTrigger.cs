@@ -6,7 +6,7 @@ public class NPCDialogueTrigger : MonoBehaviour
     public TextMeshProUGUI dialogueUI;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         dialogueUI.CrossFadeAlpha(0f, 0f, false);
     }

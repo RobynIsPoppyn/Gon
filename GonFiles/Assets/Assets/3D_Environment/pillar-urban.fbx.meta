@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 65215b68c17eee74383a35f47880d990
+guid: b2a940d5d6e142e4da96be8a48511957
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pillar_var1
+    second: {fileID: 2100000, guid: bf06d6bd21da4f84fbf19f3fd0a952f1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -32,7 +37,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 50

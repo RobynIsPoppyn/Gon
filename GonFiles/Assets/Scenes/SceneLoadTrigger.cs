@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,13 +5,19 @@ public class SceneLoadTrigger : MonoBehaviour
 {
     [SerializeField] private string[] scenesToLoad;
     [SerializeField] private string[] scenesToUnload;
+    [SerializeField] private string sceneName;
+    [SerializeField] private AudioClip newBg;
+
+    private static AudioManager manager;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("PlayerCollision"))
         {
-            LoadScenes();
-            UnloadScenes();
+            if (scenesToLoad.Length > 0) LoadScenes();
+            if (scenesToUnload.Length > 0) UnloadScenes();
+            if (sceneName != null) LoadNewScene();
+            if (manager != null) manager.ChangeBGM(newBg);
         }
     }
 
@@ -52,5 +56,10 @@ public class SceneLoadTrigger : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void LoadNewScene()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

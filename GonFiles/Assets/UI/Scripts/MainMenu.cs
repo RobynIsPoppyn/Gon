@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
@@ -11,10 +8,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private CanvasGroup menuCanvas;
     [SerializeField] private Image logo;
     [SerializeField] private Image bg;
-    [SerializeField] private Button startBtn;
-    [SerializeField] private Button settingsBtn;
-    [SerializeField] private Button creditsBtn;
-    [SerializeField] private Button quitBtn;
+    [SerializeField] private UnityEngine.UI.Button startBtn;
+    [SerializeField] private UnityEngine.UI.Button settingsBtn;
+    [SerializeField] private UnityEngine.UI.Button creditsBtn;
+    [SerializeField] private UnityEngine.UI.Button quitBtn;
     [SerializeField] private TextMeshProUGUI moveTip;
     [SerializeField] private TextMeshProUGUI subtitle;
     [SerializeField] public GameObject player;

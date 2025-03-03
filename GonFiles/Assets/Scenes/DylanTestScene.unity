@@ -1164,7 +1164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8031937639113699754, guid: 0f7a2f77572da004c8c58e81a2fcc4b2, type: 3}
       propertyPath: YForce
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8031937639113699754, guid: 0f7a2f77572da004c8c58e81a2fcc4b2, type: 3}
       propertyPath: ParticleSizeDivisor
@@ -1210,7 +1210,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.047
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1776835815084752784, guid: 0f7a2f77572da004c8c58e81a2fcc4b2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

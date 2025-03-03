@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494498469626793104}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.67, y: -0.96, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5112,7 +5112,6 @@ GameObject:
   - component: {fileID: 5183932578979018376}
   - component: {fileID: 3064401406051587940}
   - component: {fileID: 535640221093655970}
-  - component: {fileID: 1776835815084752784}
   - component: {fileID: 8031937639113699754}
   - component: {fileID: 3191068685815975577}
   m_Layer: 0
@@ -5188,18 +5187,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1776835815084752784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7023884641080811420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61de49a9d508e90438e97f7820613df2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8031937639113699754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5294,6 +5281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FanBaseMesh
       objectReference: {fileID: 0}
+    - target: {fileID: 7076191169264774925, guid: fd49d1483857afa4a90c0756fbf81180, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6146569691294468197, guid: ad8ac2f7693dab64bb07c1b718d866c5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

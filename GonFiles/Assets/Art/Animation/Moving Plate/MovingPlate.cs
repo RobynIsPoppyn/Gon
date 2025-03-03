@@ -52,4 +52,24 @@ public class MovingPlate : MonoBehaviour
         currentWaypointIndex = (currentWaypointIndex + 1) % 2;
         isWaiting = false;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerCollision"))
+        {
+            Transform player = other.transform.root;
+
+            player.SetParent(transform);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerCollision"))
+        {
+            Transform player = other.transform.parent.parent;
+
+            player.SetParent(null);
+        }
+    }
 }

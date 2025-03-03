@@ -1,16 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RepositionPlayer : MonoBehaviour
 {
-    [SerializeField] private Vector3 teleportPos;
+    [SerializeField] private GameObject spawnPt;
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("PlayerCollision"))
+        if (collision.CompareTag("PlayerCollision"))
         {
-            collision.transform.root.position = teleportPos;
+            Transform player = collision.transform.parent;
+
+            if (player != null)
+            {
+                player.position = spawnPt.transform.position;
+            }
         }
     }
 }

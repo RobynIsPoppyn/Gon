@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17313069, g: 0.21638823, b: 0.29840386, a: 1}
+  m_IndirectSpecularColor: {r: 0.17313099, g: 0.21638887, b: 0.29840496, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6207,7 +6207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6483945068871653467, guid: a75ccddb1d45e694a90587be0563ab9d, type: 3}
       propertyPath: horizontalSpeedCap
-      value: 3.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6483945068871653467, guid: a75ccddb1d45e694a90587be0563ab9d, type: 3}
       propertyPath: sphereSpeedModifier

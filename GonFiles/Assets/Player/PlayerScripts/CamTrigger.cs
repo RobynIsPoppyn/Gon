@@ -8,6 +8,7 @@ public class CamTrigger : MonoBehaviour
     private PerspectiveShift mCamMethods;
     [SerializeField] private string enterAnimName;
     [SerializeField] private string exitAnimName;
+    [SerializeField] private bool destroyOnLeave = false;
 
     private void Awake()
     {
@@ -32,6 +33,10 @@ public class CamTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerCollision") && exitAnimName != null)
         {
             mCamMethods.PlayTransition(exitAnimName);
+            if (destroyOnLeave)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

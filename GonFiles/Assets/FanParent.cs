@@ -35,6 +35,12 @@ public class FanParent : MonoBehaviour
             }
         }
     }
+    public void ParticlesOn(){
+        windZone.ps.Play();
+    }
+    public void ParticlesOff(){
+        windZone.ps.Stop();
+    }
 
     public void Toggle(){
         

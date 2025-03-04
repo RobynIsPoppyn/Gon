@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17313069, g: 0.21638823, b: 0.29840386, a: 1}
+  m_IndirectSpecularColor: {r: 0.17313099, g: 0.21638887, b: 0.29840496, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5496,8 +5496,8 @@ MonoBehaviour:
   uiSource: {fileID: 577604379}
   ballRollSource: {fileID: 115436300}
   bgm: {fileID: 8300000, guid: 986dc300e4b41d743abecae689bd250b, type: 3}
-  uiHover: {fileID: 0}
-  uiSelect: {fileID: 0}
+  uiHover: {fileID: 8300000, guid: bbfd3addb8825174182904eb79c6781e, type: 3}
+  uiSelect: {fileID: 8300000, guid: e6477daa6df03204e872d555d0ec81e2, type: 3}
   playerSwap: {fileID: 8300000, guid: 5e1a96ae69e141a44b7125e798b2d2c0, type: 3}
   playerSmashCollision: {fileID: 8300000, guid: 0cea8bebcf7098847ae22aed97d01475, type: 3}
   playerSmashWoosh: {fileID: 8300000, guid: 43863a66b7e456a4083d0fe16581b68e, type: 3}
@@ -7124,7 +7124,7 @@ MonoBehaviour:
   buttonText: {fileID: 208633986}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &532202569
 GameObject:
@@ -7431,7 +7431,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 397842290}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: playUI
         m_Mode: 2
@@ -7443,7 +7443,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 397842290}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: ChangeBGM
         m_Mode: 2
@@ -7520,7 +7520,7 @@ MonoBehaviour:
   buttonText: {fileID: 931191852}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 0
 --- !u!1 &542324012
 GameObject:
@@ -10727,7 +10727,7 @@ MonoBehaviour:
   buttonText: {fileID: 534086800}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &726624604
 GameObject:
@@ -12730,7 +12730,7 @@ MonoBehaviour:
   buttonText: {fileID: 601207270}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &861432976
 GameObject:
@@ -13001,7 +13001,7 @@ MonoBehaviour:
   buttonText: {fileID: 206701385}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1001 &864223316
 PrefabInstance:
@@ -13053,7 +13053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.8
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13073,7 +13073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 113.28
+      value: 113.1
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -14437,7 +14437,7 @@ MonoBehaviour:
   buttonText: {fileID: 575995233}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &972035843
 GameObject:
@@ -14600,7 +14600,7 @@ MonoBehaviour:
   buttonText: {fileID: 1311039579}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &985034857
 GameObject:
@@ -15737,7 +15737,7 @@ MonoBehaviour:
   buttonText: {fileID: 247799243}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &1057765977
 GameObject:
@@ -27195,7 +27195,7 @@ MonoBehaviour:
   buttonText: {fileID: 609657587}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &1618104064
 GameObject:
@@ -27469,7 +27469,7 @@ MonoBehaviour:
   buttonText: {fileID: 1305163092}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
-  transitionSpeed: 1.5
+  transitionSpeed: 2
   playClick: 1
 --- !u!1 &1629050601
 GameObject:
@@ -39177,7 +39177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.8
+      value: -4.02
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39197,7 +39197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 95.3
+      value: 95.472
       objectReference: {fileID: 0}
     - target: {fileID: 417295477347555419, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_AnchoredPosition.y

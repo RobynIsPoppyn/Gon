@@ -33,8 +33,10 @@ public class SphereShape : Shape
                 
             }
         }
-        if (!grounded)
+        if (!grounded.isGrounded){
+           
             rb.AddTorque(new Vector3(Input.GetAxis("Vertical") * torque * -1, 0, Input.GetAxis("Horizontal") * torque * -1));
+        }
             
 
         

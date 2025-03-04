@@ -62,7 +62,7 @@ public class CubeShape : Shape
 
     public void SmashStart(){
        
-        rb.rotation = Quaternion.Euler(0, transform.eulerAngles.y, 0);
+        rb.rotation = Quaternion.Euler(0, rb.transform.eulerAngles.y, 0);
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         cubeMeshAnim.Play("Base Layer.CubePlunge");
         
@@ -91,7 +91,7 @@ public class CubeShape : Shape
             rb.constraints = RigidbodyConstraints.None;
         }
         else {rb.constraints = RigidbodyConstraints.FreezePositionZ | 
-                        RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; } //Lazy solution, change me if you ever add to Switch 2d/3d
+                        RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; } 
     }
 
     /*public void OnCollisionEnter(Collision collision){
@@ -135,7 +135,7 @@ public class CubeShape : Shape
             thresholdReached = false;
         }
 
-        if (!PerspectiveShift.curr3D && pm.currShape == this){
+        if (!PerspectiveShift.curr3D && pm.currShape == this && !smashing){
             rb.rotation = Quaternion.Euler(0, 0, pm.transform.eulerAngles.z);
         }
         

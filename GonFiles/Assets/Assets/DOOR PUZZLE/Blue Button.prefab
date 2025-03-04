@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385bce9a800aa084c91cf966ca45c43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 0}
+  doorLightIndexes: 0100000003000000
 --- !u!95 &4620160077680617417
 Animator:
   serializedVersion: 5

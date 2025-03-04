@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 102842462}
   m_Layer: 0
   m_Name: ground-urban
-  m_TagString: Ground
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2325,7 +2325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2316922716955192222, guid: b4a44237fa77537458325b9ea6c21378, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 3129030064374935844, guid: b4a44237fa77537458325b9ea6c21378, type: 3}
       propertyPath: m_LocalScale.x
@@ -3233,7 +3233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 730553988027642527, guid: 46a7bfcb850d6864f922db7c261d48ad, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 2706455145705370497, guid: 46a7bfcb850d6864f922db7c261d48ad, type: 3}
       propertyPath: door
@@ -8041,7 +8041,7 @@ GameObject:
   - component: {fileID: 1068988628}
   m_Layer: 0
   m_Name: ground-urban (1)
-  m_TagString: Ground
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10915,7 +10915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4745941079534866863, guid: 428b5c7f0fb8ca445953db2bd5186c40, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 5374809660680063765, guid: 428b5c7f0fb8ca445953db2bd5186c40, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12640,7 +12640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8670900460325251208, guid: 6a8361db69ef95f4e993cf723861879f, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13160,6 +13160,10 @@ PrefabInstance:
     - target: {fileID: 5604467978546944974, guid: dcea72f4b2d898245bee53c48ead6bc9, type: 3}
       propertyPath: m_Name
       value: Blue Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604467978546944974, guid: dcea72f4b2d898245bee53c48ead6bc9, type: 3}
+      propertyPath: m_TagString
+      value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 8061080132972293182, guid: dcea72f4b2d898245bee53c48ead6bc9, type: 3}
       propertyPath: door

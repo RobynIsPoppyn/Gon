@@ -280,7 +280,7 @@ MonoBehaviour:
   downwardForce: 100
   smashing: 0
   smashSpeedCap: 2
-  cubeWeight: 1.75
+  cubeWeight: 0
   torque: 0.5
   torqueCap: 0.5
 --- !u!1 &2737858313796799180
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnableShift: 0
-  EnableGroundedMesh: 1
+  EnableGroundedMesh: 0
 --- !u!1 &8756249380482813448
 GameObject:
   m_ObjectHideFlags: 0

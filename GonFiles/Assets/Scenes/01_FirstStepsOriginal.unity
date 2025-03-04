@@ -6552,6 +6552,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 13400000, guid: 55febf6c0961f7d48bd3c8d0e6b590b2, type: 2}
     - target: {fileID: 2663794105018432441, guid: a75ccddb1d45e694a90587be0563ab9d, type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2663794105018432441, guid: a75ccddb1d45e694a90587be0563ab9d, type: 3}
       propertyPath: orthographic
       value: 1
       objectReference: {fileID: 0}

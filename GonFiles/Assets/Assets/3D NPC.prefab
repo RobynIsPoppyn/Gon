@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e554fe8a523a2469002b7e67caa95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 4909514443075067913}
+  dialogueUI: {fileID: 2202892490513789352}
 --- !u!1001 &3638013947635529452
 PrefabInstance:
   m_ObjectHideFlags: 0

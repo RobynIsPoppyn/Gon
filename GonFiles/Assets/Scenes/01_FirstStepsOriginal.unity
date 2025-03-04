@@ -6181,6 +6181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 337045621}
     m_Modifications:
+    - target: {fileID: 2554318332111670727, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3156429216868481823, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
       propertyPath: m_text
       value: Congratulations on graduating!
@@ -6240,6 +6244,14 @@ PrefabInstance:
     - target: {fileID: 6584072249672877813, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186544233242158242, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186544233242158242, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11360,7 +11372,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751437630}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15080,6 +15092,10 @@ PrefabInstance:
     - target: {fileID: 5770380506083499087, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
       propertyPath: m_Name
       value: 2D NPC (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021730277026227945, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6584072249672877813, guid: 881ba880e712fba46ab2312c21fcda05, type: 3}
       propertyPath: m_LocalScale.x

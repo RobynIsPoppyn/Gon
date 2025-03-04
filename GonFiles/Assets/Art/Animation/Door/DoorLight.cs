@@ -5,14 +5,34 @@ public class DoorLight : MonoBehaviour
     public Material noLight;
     public Material greenLight;
     public Renderer lightRenderer;
-    private string lightState = "NoLight";
+    public string lightState = "NoLight"; // "GreenLight" for on, "NoLight" for off
 
-    public void SetLightActive(bool active)
+    public void SwitchLight()
     {
         if (lightRenderer != null)
         {
-            lightRenderer.material = active ? greenLight : noLight;
-            lightState = active ? "GreenLight" : "NoLight";
+           if (lightRenderer.sharedMaterial == noLight)
+           {
+                lightRenderer.material = greenLight;
+                lightState = "GreenLight";
+           }
+           else
+           {
+                lightRenderer.material = noLight;
+                lightState = "NoLight";
+           }
+        }
+    }
+
+    public void TurnOff()
+    {
+        if (lightRenderer != null)
+        {
+            if (lightRenderer.sharedMaterial == greenLight)
+            {
+                lightRenderer.material = noLight;
+                lightState = "NoLight";
+            }
         }
     }
 }

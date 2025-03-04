@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WeightedPlates : MonoBehaviour
+public class ResetPlate : MonoBehaviour
 {
     private Animator animator;
     private bool isWeighedDown = false;
@@ -27,18 +27,10 @@ public class WeightedPlates : MonoBehaviour
             WeighDown();
             for (int i = 0; i < doorLightIndexes.Length; i++)
             {
-                door.SwitchLightState(doorLightIndexes[i]);
+                door.TurnOffLights(doorLightIndexes[i]);
             }
         }
     }
-
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (!other.CompareTag("Player")) return;
-
-    //    PlayerMovement playerMovement = other.GetComponent<PlayerMovement>() ?? other.GetComponentInParent<PlayerMovement>();
-    //    if (playerMovement == null) return;
-    //}
 
     private void OnTriggerExit(Collider other)
     {
@@ -46,7 +38,7 @@ public class WeightedPlates : MonoBehaviour
 
         // Reset the weighed-down state when the player leaves.
         isWeighedDown = false;
-        ResetPlate();
+        ResetPlateAnimation();
     }
 
     private void WeighDown()
@@ -55,7 +47,7 @@ public class WeightedPlates : MonoBehaviour
         animator.SetBool("IsPressed", true);
     }
 
-    private void ResetPlate()
+    private void ResetPlateAnimation()
     {
         animator.SetBool("IsPressed", false);
         animator.SetTrigger("BackUp");

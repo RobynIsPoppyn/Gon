@@ -16,7 +16,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip bgm;
     public AudioClip uiHover;
     public AudioClip uiSelect;
-    
+    public AudioClip playerSwap;
+    public AudioClip playerSmashCollision;
     public AudioClip barrierBreak;
     // Add other sounds here as needed
 
@@ -47,6 +48,7 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = bgm;
         musicSource.Play();
         m_rollStartVolume = ballRollSource.volume;
+        ballRollSource.volume = 0;
         
     }
 

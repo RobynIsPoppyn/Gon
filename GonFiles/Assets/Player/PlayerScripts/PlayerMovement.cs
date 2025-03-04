@@ -57,6 +57,7 @@ public class PlayerMovement : ShiftZ
         currShape.Close();
         currShapeIndex = currShapeIndex + 1 >= AvailShapes.Length ? 0 : ++currShapeIndex; 
         currShape = AvailShapes[currShapeIndex];
+        AudioManager.instance.playSFX(AudioManager.instance.playerSwap);
         
         
     }

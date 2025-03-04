@@ -600,6 +600,7 @@ MonoBehaviour:
   bgm: {fileID: 8300000, guid: 986dc300e4b41d743abecae689bd250b, type: 3}
   uiHover: {fileID: 0}
   uiSelect: {fileID: 0}
+  playerSwap: {fileID: 8300000, guid: 5e1a96ae69e141a44b7125e798b2d2c0, type: 3}
   barrierBreak: {fileID: 8300000, guid: be70a7cb04fee954b9d84c3d027cfc71, type: 3}
 --- !u!4 &43115243
 Transform:

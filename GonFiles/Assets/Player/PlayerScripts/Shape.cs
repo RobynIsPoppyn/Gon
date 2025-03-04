@@ -15,7 +15,11 @@ public class Shape : MonoBehaviour
     public MeshRenderer rend; 
 
     public PlayerMovement pm; 
+
+    public CameraAnimationTriggers cat; 
+    
     public virtual void Start(){
+        cat = Camera.main.transform.parent.parent.GetComponent<CameraAnimationTriggers>();
         pm = GameObject.Find("Player").GetComponent<PlayerMovement>();
         //rend.material = materials[PerspectiveShift.curr3D ? 1 : 0];
         rb = transform.parent.GetComponent<Rigidbody>(); 
@@ -72,4 +76,15 @@ public class Shape : MonoBehaviour
         
     }
 
+    public virtual void BounceAnim(){
+        int picker = Random.Range(1, 2);
+        cat.PlayAnim("Collide1");
+    }
+
+    public void OnCollisionEnter(Collision collision){
+        print("Collided");
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "Wall"){
+            BounceAnim();
+        }
+    }
 }

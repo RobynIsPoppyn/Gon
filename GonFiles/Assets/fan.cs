@@ -10,6 +10,7 @@ public class Fan : MonoBehaviour
     public ParticleSystem ps;
     public float ParticleSizeDivisor = 40;
     
+    
     public void Update(){
         var main = ps.main; 
         main.startLifetime = transform.localScale.y  / ParticleSizeDivisor;

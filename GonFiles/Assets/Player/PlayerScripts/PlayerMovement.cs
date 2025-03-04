@@ -11,9 +11,11 @@ public class PlayerMovement : ShiftZ
     public Shape currShape{get; private set;}
     public bool capableOfBreaking; 
     
-    // Start is called before the first frame update
-    protected override void Start()
+    public CameraAnimationTriggers cat; 
+    
+    public virtual void Start()
     {
+        cat = Camera.main.transform.parent.parent.GetComponent<CameraAnimationTriggers>();
         base.Start();
         currShape = AvailShapes[0]; 
         currShapeIndex = 0;
@@ -37,6 +39,7 @@ public class PlayerMovement : ShiftZ
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)){
+            SwitchAnim();
             Switch();
         }   
 
@@ -69,6 +72,28 @@ public class PlayerMovement : ShiftZ
     }
     public void FanExit(Fan fan){
         currShape.FanLeave(fan);
+    }
+
+    public float bounceVelRequirement;
+    public void OnCollisionEnter(Collision collision){
+       
+        if (collision.collider.tag == "Ground" || collision.collider.tag == "Wall"){
+            if (Mathf.Abs(GetComponent<Rigidbody>().velocity.x) > bounceVelRequirement || Mathf.Abs(GetComponent<Rigidbody>().velocity.z) > bounceVelRequirement || Mathf.Abs(GetComponent<Rigidbody>().velocity.y) > bounceVelRequirement)
+            BounceAnim();
+        }
+    }
+
+    public virtual void BounceAnim(){
+        int picker = Random.Range(1, 3);
+        print(picker);
+        cat.SetTrigger("Collide" + picker);
+    }
+
+    public void SwitchAnim(){
+        cat.PlayAnim("Switch");
+    }
+    public void SmashAnim(){
+        cat.PlayAnim("Smash");
     }
     
 }

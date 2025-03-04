@@ -99,7 +99,8 @@ public class CubeShape : Shape
             m_slamInitiated = false;
             print("Unconstrainted'");
             rb.constraints = RigidbodyConstraints.FreezePositionZ | 
-                        RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; } 
+                        RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; }
+        pm.SmashAnim();
     }
 
     /*public void OnCollisionEnter(Collision collision){

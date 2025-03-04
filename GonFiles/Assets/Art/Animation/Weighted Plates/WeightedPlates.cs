@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class WeightedPlates : MonoBehaviour
 {
     private Animator animator;
     private bool isWeighedDown = false;
+    public PuzzleDoor door;
+    public int[] doorLightIndexes; // which lights this plate controls
 
     private void Start()
     {
-        // Look for the Animator in the parent hierarchy.
         animator = GetComponent<Animator>();
     }
 
@@ -23,7 +24,11 @@ public class Button : MonoBehaviour
         if (playerMovement.currShape.GetComponent<CubeShape>() != null)
         {
             isWeighedDown = true;
-            WeighDownAnimation();
+            WeighDown();
+            for (int i = 0; i < doorLightIndexes.Length; i++)
+            {
+                door.SetLightState(doorLightIndexes[i], true);
+            }
         }
     }
 
@@ -41,16 +46,16 @@ public class Button : MonoBehaviour
 
         // Reset the weighed-down state when the player leaves.
         isWeighedDown = false;
-        ResetPlateAnimation();
+        ResetPlate();
     }
 
-    private void WeighDownAnimation()
+    private void WeighDown()
     {
         // Set a bool parameter so that the plate remains depressed.
         animator.SetBool("IsPressed", true);
     }
 
-    private void ResetPlateAnimation()
+    private void ResetPlate()
     {
         animator.SetBool("IsPressed", false);
         animator.SetTrigger("BackUp");

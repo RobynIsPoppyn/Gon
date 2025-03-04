@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 public class SceneLoadTrigger : MonoBehaviour
 {
     [SerializeField] private string[] scenesToLoad;
-    [SerializeField] private string sceneName;
+    [SerializeField] private bool loadNext = false;
     [SerializeField] private AudioClip newBg;
+    [SerializeField] private TransitionLoader loader;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("PlayerCollision"))
         {
             if (scenesToLoad.Length > 0) LoadScenes();
-            if (sceneName != "") LoadNewScene();
+            if (loadNext) loader.LoadNextLevel(newBg);
         }
     }
 
@@ -36,28 +37,6 @@ public class SceneLoadTrigger : MonoBehaviour
             {
                 SceneManager.LoadSceneAsync(scenesToLoad[i], LoadSceneMode.Additive);
             }
-        }
-    }
-
-    private void LoadNewScene()
-    {
-        StartCoroutine(LoadSceneRoutine());
-    }
-
-    private IEnumerator LoadSceneRoutine()
-    {
-        if (PlayerManager.instance != null)
-        {
-            Destroy(PlayerManager.instance.gameObject);
-        }
-
-        yield return null; // Wait one frame to ensure it's removed
-
-        SceneManager.LoadScene(sceneName);
-
-        if (AudioManager.instance != null)
-        {
-            AudioManager.instance.ChangeBGM(newBg);
         }
     }
 }

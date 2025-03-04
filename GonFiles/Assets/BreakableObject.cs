@@ -22,6 +22,7 @@ public class BreakableObject : ShiftZ
                 transform.GetChild(0).gameObject.SetActive(true);
                 //transform.GetChild(0).GetComponent<ParticleSystem>().Play();
                 transform.GetChild(0).parent = null;
+                AudioManager.instance.playSFX(AudioManager.instance.barrierBreak);
                 GameObject.Destroy(this.gameObject);
             }
         }

@@ -9,14 +9,19 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
     [SerializeField] AudioSource uiSource;
+    [Header("---------- Audio Source For Looped Sounds ----------")]
+    [SerializeField] AudioSource ballRollSource; 
 
     [Header("---------- Audio Clips ----------")]
     public AudioClip bgm;
     public AudioClip uiHover;
     public AudioClip uiSelect;
+    
+    public AudioClip barrierBreak;
     // Add other sounds here as needed
 
     public static AudioManager instance;
+    private float m_rollStartVolume; 
 
     private void Awake()
     {
@@ -41,6 +46,8 @@ public class AudioManager : MonoBehaviour
 
         musicSource.clip = bgm;
         musicSource.Play();
+        m_rollStartVolume = ballRollSource.volume;
+        
     }
 
     // Change BGM
@@ -74,6 +81,7 @@ public class AudioManager : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(playerKey))
         {
+           
             float volume = PlayerPrefs.GetFloat(playerKey);
             gonMixer.SetFloat(mixerParam, Mathf.Log10(volume) * 20);
         }
@@ -88,5 +96,29 @@ public class AudioManager : MonoBehaviour
     public void playUI(AudioClip clip)
     {
         uiSource.PlayOneShot(clip);
+    }
+
+    private bool m_rollIncreasing = false;
+    public void toggleRollSound(bool toggle){
+        if (!m_rollIncreasing && toggle){
+            print("Start Playing");
+            m_rollIncreasing = true;
+           // ballRollSource.Play();
+        }
+        else if (!toggle) 
+        {
+           // ballRollSource.Pause();
+            m_rollIncreasing = false;
+            print("Stop Playing");
+        }
+    }
+    
+    public void FixedUpdate(){
+        if (m_rollIncreasing == true){
+            ballRollSource.volume = ballRollSource.volume + 0.05f > m_rollStartVolume ? m_rollStartVolume : ballRollSource.volume + 0.05f;
+        }
+        else if (m_rollIncreasing == false){
+            ballRollSource.volume = ballRollSource.volume - 0.05f < 0 ? 0 : ballRollSource.volume - 0.05f;
+        }
     }
 }

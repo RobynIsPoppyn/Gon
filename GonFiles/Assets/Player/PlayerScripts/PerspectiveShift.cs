@@ -15,7 +15,7 @@ public class PerspectiveShift : MonoBehaviour
     {
 
         curr3D = !Camera.main.orthographic;
-        print(curr3D);
+        
         anim = transform.GetComponent<Animator>();
         oldPosition = transform.position.x;
     }

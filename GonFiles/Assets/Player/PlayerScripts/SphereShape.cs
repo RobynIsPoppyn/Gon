@@ -22,6 +22,13 @@ public class SphereShape : Shape
     
 
     public override void Move(Vector3 direction, bool curr3D){
+
+        if (grounded.isGrounded && !direction.Equals(Vector3.zero))
+        {
+
+            print(Input.GetAxis("Horizontal"));
+            AudioManager.instance.toggleRollSound(true);
+        }
         direction = check3D(direction, curr3D);
         if (!(Mathf.Abs(rb.velocity.x) >= horizontalSpeedCap || Mathf.Abs(rb.velocity.z) >= horizontalSpeedCap)){
             rb.AddForce(direction * Speed * sphereSpeedModifier);
@@ -58,6 +65,14 @@ public class SphereShape : Shape
         if (Input.GetAxis("Vertical") == 0 && rb.velocity.z != 0 && grounded){
             rb.AddForce(new Vector3(0, 0, -1 * rb.velocity.z * friction));
         }
+
+        if (Input.GetAxis("Horizontal") == 0) {
+            if (Input.GetAxis("Vertical") == 0 || !PerspectiveShift.curr3D){
+                AudioManager.instance.toggleRollSound(false);
+            }
+        }
+        if (!grounded.isGrounded)
+            AudioManager.instance.toggleRollSound(false);
         
     }
 

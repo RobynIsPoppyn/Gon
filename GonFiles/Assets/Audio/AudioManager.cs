@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip finishSound;
     public AudioClip fanOn;
     public AudioClip fanOff;
+    public AudioClip failSound;
     // Add other sounds here as needed
 
     public static AudioManager instance;
@@ -69,7 +70,12 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(FadeSwitch(newBgm));
     }
 
-    private System.Collections.IEnumerator FadeSwitch(AudioClip newBgm)
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
+
+    private IEnumerator FadeSwitch(AudioClip newBgm)
     {
         float startVolume = musicSource.volume;
 

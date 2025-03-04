@@ -23,16 +23,16 @@ public class TransitionLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex, AudioClip newBg)
     {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTimer);
+
         if (PlayerManager.instance != null)
         {
             Destroy(PlayerManager.instance.gameObject);
         }
 
         yield return null;
-
-        transition.SetTrigger("Start");
-
-        yield return new WaitForSeconds(transitionTimer);
 
         AudioManager.instance.playSFX(AudioManager.instance.finishSound);
         SceneManager.LoadScene(levelIndex);

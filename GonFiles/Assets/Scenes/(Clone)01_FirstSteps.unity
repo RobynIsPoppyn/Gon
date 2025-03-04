@@ -609,9 +609,11 @@ MonoBehaviour:
   springSound: {fileID: 8300000, guid: aaa97e5d9ae97744684c4a895b2b6f84, type: 3}
   springArm: {fileID: 8300000, guid: 1cdbf47d043408c4284b65ae7a926ef1, type: 3}
   npcSound: {fileID: 8300000, guid: 6da5b44a216f8184c9b84a8b77e33f93, type: 3}
-  lightOn: {fileID: 0}
-  lightOff: {fileID: 0}
-  finishSound: {fileID: 0}
+  lightOn: {fileID: 8300000, guid: 271d7a94877664f4a9a5bc80eab4e027, type: 3}
+  lightOff: {fileID: 8300000, guid: 63099bc0d236b7e44bbbc7042bccb526, type: 3}
+  finishSound: {fileID: 8300000, guid: 942dbce15ed930f45815b56947258c56, type: 3}
+  fanOn: {fileID: 8300000, guid: 271d7a94877664f4a9a5bc80eab4e027, type: 3}
+  fanOff: {fileID: 8300000, guid: 63099bc0d236b7e44bbbc7042bccb526, type: 3}
 --- !u!4 &43115243
 Transform:
   m_ObjectHideFlags: 0
@@ -8529,7 +8531,7 @@ GameObject:
   - component: {fileID: 593993070}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

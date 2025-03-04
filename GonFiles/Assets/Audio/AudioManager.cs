@@ -28,6 +28,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip lightOn;
     public AudioClip lightOff; 
     public AudioClip finishSound;
+    public AudioClip fanOn;
+    public AudioClip fanOff;
     // Add other sounds here as needed
 
     public static AudioManager instance;

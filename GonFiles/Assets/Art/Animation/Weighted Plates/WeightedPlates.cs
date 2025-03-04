@@ -51,12 +51,14 @@ public class WeightedPlates : MonoBehaviour
 
     private void WeighDown()
     {
+        AudioManager.instance.playSFX(AudioManager.instance.springArm);
         // Set a bool parameter so that the plate remains depressed.
         animator.SetBool("IsPressed", true);
     }
 
     private void ResetPlate()
     {
+        AudioManager.instance.playSFX(AudioManager.instance.springSound);
         animator.SetBool("IsPressed", false);
         animator.SetTrigger("BackUp");
         animator.SetTrigger("IdleUp");

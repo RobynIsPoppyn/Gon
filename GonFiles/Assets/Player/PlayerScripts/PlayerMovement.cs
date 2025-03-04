@@ -15,7 +15,7 @@ public class PlayerMovement : ShiftZ
     
     public virtual void Start()
     {
-        cat = Camera.main.transform.parent.parent.GetComponent<CameraAnimationTriggers>();
+        cat = GameObject.Find("CameraContainer").GetComponent<CameraAnimationTriggers>();
         base.Start();
         currShape = AvailShapes[0]; 
         currShapeIndex = 0;

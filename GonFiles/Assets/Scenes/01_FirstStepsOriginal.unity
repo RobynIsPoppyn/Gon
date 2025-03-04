@@ -597,8 +597,8 @@ MonoBehaviour:
   sfxSource: {fileID: 1542074285}
   uiSource: {fileID: 670022247}
   bgm: {fileID: 8300000, guid: 986dc300e4b41d743abecae689bd250b, type: 3}
-  uiHover: {fileID: 0}
-  uiSelect: {fileID: 0}
+  uiHover: {fileID: 8300000, guid: bbfd3addb8825174182904eb79c6781e, type: 3}
+  uiSelect: {fileID: 8300000, guid: e6477daa6df03204e872d555d0ec81e2, type: 3}
 --- !u!4 &43115243
 Transform:
   m_ObjectHideFlags: 0
@@ -1817,7 +1817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 124.166
+      value: 125.23
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5520,7 +5520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 126.629
+      value: 127.693
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6774,6 +6774,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &532202569
 GameObject:
   m_ObjectHideFlags: 0
@@ -7169,6 +7170,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 0
 --- !u!1001 &538965433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9361,7 +9363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 119.2
+      value: 120.264
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10454,6 +10456,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &726624604
 GameObject:
   m_ObjectHideFlags: 0
@@ -12456,6 +12459,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &861432976
 GameObject:
   m_ObjectHideFlags: 0
@@ -12726,6 +12730,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1001 &864223316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14238,6 +14243,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &972035843
 GameObject:
   m_ObjectHideFlags: 0
@@ -14400,6 +14406,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &985034857
 GameObject:
   m_ObjectHideFlags: 0
@@ -15462,6 +15469,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &1057765977
 GameObject:
   m_ObjectHideFlags: 0
@@ -26662,6 +26670,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &1618104064
 GameObject:
   m_ObjectHideFlags: 0
@@ -26935,6 +26944,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.541, g: 0.749, b: 0.98, a: 1}
   transitionSpeed: 1.5
+  playClick: 1
 --- !u!1 &1629050601
 GameObject:
   m_ObjectHideFlags: 0
@@ -27684,7 +27694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.096
+      value: 130.16
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -35227,7 +35237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 121.686
+      value: 122.75
       objectReference: {fileID: 0}
     - target: {fileID: 3511388512649661615, guid: f4dff7320e804a3479d74fc00bd12b4c, type: 3}
       propertyPath: m_LocalPosition.y

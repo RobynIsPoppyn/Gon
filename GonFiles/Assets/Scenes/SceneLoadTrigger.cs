@@ -1,23 +1,19 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoadTrigger : MonoBehaviour
 {
     [SerializeField] private string[] scenesToLoad;
-    [SerializeField] private string[] scenesToUnload;
     [SerializeField] private string sceneName;
     [SerializeField] private AudioClip newBg;
-
-    private static AudioManager manager;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("PlayerCollision"))
         {
             if (scenesToLoad.Length > 0) LoadScenes();
-            if (scenesToUnload.Length > 0) UnloadScenes();
-            if (sceneName != null) LoadNewScene();
-            if (manager != null) manager.ChangeBGM(newBg);
+            if (sceneName != "") LoadNewScene();
         }
     }
 
@@ -43,23 +39,25 @@ public class SceneLoadTrigger : MonoBehaviour
         }
     }
 
-    private void UnloadScenes()
-    {
-        for (int i = 0; i < scenesToUnload.Length; i++)
-        {
-            for (int j = 0; j < SceneManager.sceneCount; j++)
-            {
-                Scene loadedScene = SceneManager.GetSceneAt(j);
-                if (loadedScene.name == scenesToUnload[i])
-                {
-                    SceneManager.UnloadSceneAsync(scenesToUnload[i]);
-                }
-            }
-        }
-    }
-
     private void LoadNewScene()
     {
+        StartCoroutine(LoadSceneRoutine());
+    }
+
+    private IEnumerator LoadSceneRoutine()
+    {
+        if (PlayerManager.instance != null)
+        {
+            Destroy(PlayerManager.instance.gameObject);
+        }
+
+        yield return null; // Wait one frame to ensure it's removed
+
         SceneManager.LoadScene(sceneName);
+
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.ChangeBGM(newBg);
+        }
     }
 }

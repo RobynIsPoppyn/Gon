@@ -26,11 +26,11 @@ public class FanParent : MonoBehaviour
             if (m_timePass > intervalOn && FanOn){
                m_reset = true;
                 Toggle();
-                AudioManager.instance.playSFX(AudioManager.instance.fanOn);
+                //AudioManager.instance.playSFX(AudioManager.instance.fanOn);
             }
             else if (m_timePass > intervalOff && !FanOn){
                m_reset = true;
-                AudioManager.instance.playSFX(AudioManager.instance.fanOff);
+               // AudioManager.instance.playSFX(AudioManager.instance.fanOff);
                 Toggle();
             }
         }

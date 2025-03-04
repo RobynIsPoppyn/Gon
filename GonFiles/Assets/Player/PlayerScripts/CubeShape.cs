@@ -14,9 +14,10 @@ public class CubeShape : Shape
     private float _defWeight = 1f; 
     public float torque = 1f;
     public float torqueCap = 1f;
+    private bool m_slamInitiated = false;
 
     public override void Open(){
-        
+        m_slamInitiated = false;
         anim.Play("Base Layer.CubeOpen");
         StartCoroutine(OpenHelper());
         rb.drag = cubeWeight;
@@ -43,8 +44,12 @@ public class CubeShape : Shape
     }
     public override void Action(){
     
-        if (!grounded.isGrounded && !smashing){
+        if (!smashing && !m_slamInitiated){
             rb.velocity = Vector3.zero; 
+            m_slamInitiated = true;
+            rb.rotation = Quaternion.Euler(0, rb.transform.eulerAngles.y, 0);
+            rb.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
+            print(rb.constraints);
             SmashStart();
         }
     }
@@ -62,8 +67,8 @@ public class CubeShape : Shape
 
     public void SmashStart(){
        
-        rb.rotation = Quaternion.Euler(0, rb.transform.eulerAngles.y, 0);
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        
+        
         cubeMeshAnim.Play("Base Layer.CubePlunge");
         
     }
@@ -90,7 +95,10 @@ public class CubeShape : Shape
         if (PerspectiveShift.curr3D){
             rb.constraints = RigidbodyConstraints.None;
         }
-        else {rb.constraints = RigidbodyConstraints.FreezePositionZ | 
+        else {
+            m_slamInitiated = false;
+            print("Unconstrainted'");
+            rb.constraints = RigidbodyConstraints.FreezePositionZ | 
                         RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; } 
     }
 
@@ -102,8 +110,8 @@ public class CubeShape : Shape
 
     public override void Switch2D(){
 
-        rb.constraints = RigidbodyConstraints.FreezePositionZ | 
-                        RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; 
+        //rb.constraints = RigidbodyConstraints.FreezePositionZ | 
+       //                 RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; 
         rend.material = materials[0];
     }
     public override void Switch3D(){
@@ -135,7 +143,7 @@ public class CubeShape : Shape
             thresholdReached = false;
         }
 
-        if (!PerspectiveShift.curr3D && pm.currShape == this && !smashing){
+        if (!PerspectiveShift.curr3D && pm.currShape == this && !m_slamInitiated){
             rb.rotation = Quaternion.Euler(0, 0, pm.transform.eulerAngles.z);
         }
         

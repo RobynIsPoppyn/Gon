@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip uiSelect;
     public AudioClip playerSwap;
     public AudioClip playerSmashCollision;
+    public AudioClip playerSmashWoosh; 
     public AudioClip barrierBreak;
     // Add other sounds here as needed
 

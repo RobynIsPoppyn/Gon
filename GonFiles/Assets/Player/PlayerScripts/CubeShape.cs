@@ -68,7 +68,7 @@ public class CubeShape : Shape
     public void SmashStart(){
        
         
-        
+        AudioManager.instance.playSFX(AudioManager.instance.playerSmashWoosh);
         cubeMeshAnim.Play("Base Layer.CubePlunge");
         
     }
@@ -96,6 +96,7 @@ public class CubeShape : Shape
             rb.constraints = RigidbodyConstraints.None;
         }
         else {
+            thresholdReached = false;
             m_slamInitiated = false;
             print("Unconstrainted'");
             rb.constraints = RigidbodyConstraints.FreezePositionZ | 
@@ -141,7 +142,7 @@ public class CubeShape : Shape
             thresholdReached = true;
         }
         else {
-            thresholdReached = false;
+            
         }
 
         if (!PerspectiveShift.curr3D && pm.currShape == this && !m_slamInitiated){
@@ -151,7 +152,8 @@ public class CubeShape : Shape
 
         if (grounded.isGrounded && smashing || !rb.useGravity && !thresholdReached && !smashing ){
             SmashEnd(true);
-            AudioManager.instance.playSFX(AudioManager.instance.playerSmashCollision);
+            if (thresholdReached)
+                AudioManager.instance.playSFX(AudioManager.instance.playerSmashCollision);
             
         }
         else if (smashing && rb.velocity.y < -1 * smashSpeedCap){

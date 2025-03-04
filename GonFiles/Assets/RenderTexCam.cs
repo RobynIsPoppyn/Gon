@@ -10,5 +10,8 @@ public class RenderTexCam : MonoBehaviour
     void Update()
     {
         GetComponent<Camera>().orthographic = transform.parent.GetComponent<Camera>().orthographic;
+        if (GetComponent<Camera>().orthographic){
+            GetComponent<Camera>().orthographicSize = transform.parent.GetComponent<Camera>().orthographicSize;
+        }
     }
 }

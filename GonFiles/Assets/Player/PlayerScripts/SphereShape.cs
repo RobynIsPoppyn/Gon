@@ -32,18 +32,29 @@ public class SphereShape : Shape
             AudioManager.instance.toggleRollSound(true);
         }
         direction = check3D(direction, curr3D);
-        if (!(Mathf.Abs(rb.velocity.x) >= horizontalSpeedCap || Mathf.Abs(rb.velocity.z) >= horizontalSpeedCap)){
-            rb.AddForce(direction * Speed * sphereSpeedModifier);
+        if (Mathf.Abs(rb.velocity.x) < horizontalSpeedCap){
+            rb.AddForce(new Vector3(direction.x * Speed * sphereSpeedModifier, 0, 0));
             if (rb.velocity.x / Input.GetAxis("Horizontal") < 0){
                 rb.AddForce(new Vector3(direction.x * deacceleration, 0, 0));
                 
             }
+        }
+        else if (rb.velocity.x / Input.GetAxis("Horizontal") < 0){
+                rb.AddForce(new Vector3(direction.x * deacceleration, 0, 0));
+                
+        }
+        if (Mathf.Abs(rb.velocity.z) < horizontalSpeedCap){
+            rb.AddForce(new Vector3(0, 0, direction.z * Speed * sphereSpeedModifier));
             if (rb.velocity.z / Input.GetAxis("Vertical") < 0) {
                 rb.AddForce(new Vector3(0, 0, direction.z * deacceleration));
-                
-                
+
             }
         }
+        else if (rb.velocity.z / Input.GetAxis("Vertical") < 0) {
+                rb.AddForce(new Vector3(0, 0, direction.z * deacceleration));
+
+        }
+        
         if (!grounded.isGrounded){
            
             rb.AddTorque(new Vector3(Input.GetAxis("Vertical") * torque * -1, 0, Input.GetAxis("Horizontal") * torque * -1));

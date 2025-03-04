@@ -3,7 +3,16 @@ guid: 4922964697ce65e43811dd18230741df
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gonMixer: {instanceID: 0}
+  - musicSource: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - uiSource: {instanceID: 0}
+  - bgm: {instanceID: 0}
+  - uiHover: {instanceID: 0}
+  - uiSelect: {instanceID: 0}
+  - ballRoll: {instanceID: 0}
+  - barrierBreak: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

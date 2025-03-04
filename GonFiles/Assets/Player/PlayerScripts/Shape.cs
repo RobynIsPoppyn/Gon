@@ -76,15 +76,7 @@ public class Shape : MonoBehaviour
         
     }
 
-    public virtual void BounceAnim(){
-        int picker = Random.Range(1, 2);
-        cat.PlayAnim("Collide1");
-    }
+    
 
-    public void OnCollisionEnter(Collision collision){
-        print("Collided");
-        if (collision.collider.tag == "Ground" || collision.collider.tag == "Wall"){
-            BounceAnim();
-        }
-    }
+    
 }

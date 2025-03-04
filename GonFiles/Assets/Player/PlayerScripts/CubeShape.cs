@@ -151,6 +151,7 @@ public class CubeShape : Shape
 
         if (grounded.isGrounded && smashing || !rb.useGravity && !thresholdReached && !smashing ){
             SmashEnd(true);
+            AudioManager.instance.playSFX(AudioManager.instance.playerSmashCollision);
             
         }
         else if (smashing && rb.velocity.y < -1 * smashSpeedCap){

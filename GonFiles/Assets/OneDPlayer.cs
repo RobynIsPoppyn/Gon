@@ -16,7 +16,7 @@ public class OneDPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (rb.velocity.x < speedCap)
             rb.AddForce(new Vector3(speed * Input.GetAxis("Horizontal"), 0, 0));

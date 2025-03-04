@@ -19972,7 +19972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenesToLoad: []
   sceneName: 03_NineToFive
-  newBg: {fileID: 8300000, guid: 9bee0424c5ec49a40a5e13b7196bbf68, type: 3}
+  newBg: {fileID: 8300000, guid: ec7ca496131c5e349bdca9a42666209e, type: 3}
 --- !u!65 &1337719556
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class PuzzleDoor : MonoBehaviour
     // Reset lights
     public void TurnOffLights(int lightIndex)
     {
-        if (doorLights != null && lightIndex >= 0 && lightIndex < doorLights.Length)
+        if (doorLights != null && lightIndex >= 0 && lightIndex < doorLights.Length && !doorOpened)
         {
             doorLights[lightIndex].TurnOff();
         }

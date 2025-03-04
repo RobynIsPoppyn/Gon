@@ -604,11 +604,11 @@ MonoBehaviour:
   playerSmashCollision: {fileID: 8300000, guid: 0cea8bebcf7098847ae22aed97d01475, type: 3}
   playerSmashWoosh: {fileID: 8300000, guid: 43863a66b7e456a4083d0fe16581b68e, type: 3}
   playerJump: {fileID: 8300000, guid: 43863a66b7e456a4083d0fe16581b68e, type: 3}
-  playerRegCollision: {fileID: 8300000, guid: 43863a66b7e456a4083d0fe16581b68e, type: 3}
+  playerRegCollision: {fileID: 8300000, guid: 0cea8bebcf7098847ae22aed97d01475, type: 3}
   barrierBreak: {fileID: 8300000, guid: be70a7cb04fee954b9d84c3d027cfc71, type: 3}
   springSound: {fileID: 8300000, guid: aaa97e5d9ae97744684c4a895b2b6f84, type: 3}
   springArm: {fileID: 8300000, guid: 1cdbf47d043408c4284b65ae7a926ef1, type: 3}
-  npcSound: {fileID: 0}
+  npcSound: {fileID: 8300000, guid: 6da5b44a216f8184c9b84a8b77e33f93, type: 3}
   lightOn: {fileID: 0}
   lightOff: {fileID: 0}
   finishSound: {fileID: 0}

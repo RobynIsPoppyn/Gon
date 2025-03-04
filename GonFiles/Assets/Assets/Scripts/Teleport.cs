@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [SerializeField] private float firstDuration = 45f;
-    [SerializeField] private float secondDuration = 15f;
+    [SerializeField] private float firstDuration = 40f;
+    [SerializeField] private float secondDuration = 20f;
     [SerializeField] private GameObject telePt;
     [SerializeField] private GameObject camContainer;
     [SerializeField] private GameObject failCanvas;

@@ -7,13 +7,13 @@ public class Grounded : MonoBehaviour
     public bool isGrounded;
 
     void OnTriggerStay(Collider collider){
-        if (collider.tag.Equals("Ground")){
+        if (collider.tag.Equals("Ground") || collider.tag.Equals("Button")){
             
             isGrounded = true;
         }
     }
     void OnTriggerExit(Collider collider){
-        if (collider.tag.Equals("Ground")){
+        if (collider.tag.Equals("Ground") || collider.tag.Equals("Button")){
            
             isGrounded = false;
         }

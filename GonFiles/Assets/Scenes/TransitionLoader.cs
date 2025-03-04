@@ -34,6 +34,7 @@ public class TransitionLoader : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTimer);
 
+        AudioManager.instance.playSFX(AudioManager.instance.finishSound);
         SceneManager.LoadScene(levelIndex);
 
         if (AudioManager.instance != null)

@@ -15,8 +15,10 @@ public class SphereShape : Shape
     
 
     public override void Action(){
-        if (grounded.isGrounded)
+        if (grounded.isGrounded){
             rb.AddForce(new Vector3(0, jumpForce, 0));
+            AudioManager.instance.playSFX(AudioManager.instance.playerJump);
+        }
     }
 
     

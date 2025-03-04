@@ -80,7 +80,13 @@ public class PlayerMovement : ShiftZ
        
         if (collision.collider.tag == "Ground" || collision.collider.tag == "Wall"){
             if (Mathf.Abs(GetComponent<Rigidbody>().velocity.x) > bounceVelRequirement || Mathf.Abs(GetComponent<Rigidbody>().velocity.z) > bounceVelRequirement || Mathf.Abs(GetComponent<Rigidbody>().velocity.y) > bounceVelRequirement)
-            BounceAnim();
+            {
+                print("SOUND OFF");
+                AudioManager.instance.playSFX(AudioManager.instance.playerRegCollision);
+                BounceAnim();
+                
+            }
+            
         }
     }
 

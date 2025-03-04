@@ -61,6 +61,7 @@ public class PuzzleDoor : MonoBehaviour
 
     private void OpenDoor()
     {
+        AudioManager.instance.playSFX(AudioManager.instance.finishSound);
         animator.SetTrigger("Open");
     }
 }

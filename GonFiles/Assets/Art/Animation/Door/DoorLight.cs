@@ -13,11 +13,13 @@ public class DoorLight : MonoBehaviour
         {
            if (lightRenderer.sharedMaterial == noLight)
            {
+                AudioManager.instance.playSFX(AudioManager.instance.lightOn);
                 lightRenderer.material = greenLight;
                 lightState = "GreenLight";
            }
            else
            {
+                AudioManager.instance.playSFX(AudioManager.instance.lightOff);
                 lightRenderer.material = noLight;
                 lightState = "NoLight";
            }
@@ -30,6 +32,7 @@ public class DoorLight : MonoBehaviour
         {
             if (lightRenderer.sharedMaterial == greenLight)
             {
+                AudioManager.instance.playSFX(AudioManager.instance.lightOff);
                 lightRenderer.material = noLight;
                 lightState = "NoLight";
             }

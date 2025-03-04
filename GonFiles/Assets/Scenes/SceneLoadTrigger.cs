@@ -7,6 +7,7 @@ public class SceneLoadTrigger : MonoBehaviour
     [SerializeField] private string[] scenesToLoad;
     [SerializeField] private bool loadNext = false;
     [SerializeField] private AudioClip newBg;
+    [SerializeField] private int nextLvlIndex;
     [SerializeField] private TransitionLoader loader;
 
     private void OnTriggerEnter(Collider collision)
@@ -14,7 +15,7 @@ public class SceneLoadTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerCollision"))
         {
             if (scenesToLoad.Length > 0) LoadScenes();
-            if (loadNext) loader.LoadNextLevel(newBg);
+            if (loadNext) loader.LoadNextLevel(nextLvlIndex, newBg);
         }
     }
 

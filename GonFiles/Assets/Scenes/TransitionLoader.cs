@@ -16,9 +16,9 @@ public class TransitionLoader : MonoBehaviour
         }
     }
 
-    public void LoadNextLevel(AudioClip newBg)
+    public void LoadNextLevel(int index, AudioClip newBg)
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1, newBg));
+        StartCoroutine(LoadLevel(index, newBg));
     }
 
     IEnumerator LoadLevel(int levelIndex, AudioClip newBg)
@@ -29,7 +29,7 @@ public class TransitionLoader : MonoBehaviour
         }
 
         yield return null;
-        
+
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTimer);

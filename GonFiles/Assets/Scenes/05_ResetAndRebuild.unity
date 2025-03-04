@@ -3050,6 +3050,7 @@ MonoBehaviour:
   scenesToLoad: []
   loadNext: 1
   newBg: {fileID: 8300000, guid: c140e8c7ce1e1494e87b9849b7acc683, type: 3}
+  nextLvlIndex: 5
   loader: {fileID: 446771258}
 --- !u!65 &1430776153
 BoxCollider:

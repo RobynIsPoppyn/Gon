@@ -20,6 +20,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip playerSmashCollision;
     public AudioClip playerSmashWoosh; 
     public AudioClip barrierBreak;
+    public AudioClip springSound;
+    public AudioClip springArm;
+    public AudioClip npcSound;
     // Add other sounds here as needed
 
     public static AudioManager instance;

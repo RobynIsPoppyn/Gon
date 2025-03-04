@@ -24,7 +24,11 @@ public class JumpPlate : MonoBehaviour
         // If in Cube mode, weigh down the plate.
         if (playerMovement.currShape.GetComponent<CubeShape>() != null)
         {
+            if (!isWeighedDown){
+                AudioManager.instance.playSFX(AudioManager.instance.springArm);
+            }
             isWeighedDown = true;
+            
             WeighDownAnimation();
         }
     }
@@ -55,6 +59,7 @@ public class JumpPlate : MonoBehaviour
 
     private void WeighDownAnimation()
     {
+        
         // Set a bool parameter so that the plate remains depressed.
         animator.SetBool("IsPressed", true);
     }
@@ -74,6 +79,7 @@ public class JumpPlate : MonoBehaviour
         // Reset the depressed state and trigger the pop-up animation.
         animator.SetBool("IsPressed", false);
         animator.SetTrigger("IdleUp");
+        AudioManager.instance.playSFX(AudioManager.instance.springSound);
     }
 
     private void ResetPlateAnimation()

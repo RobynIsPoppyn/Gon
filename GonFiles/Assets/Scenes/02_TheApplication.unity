@@ -1532,7 +1532,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: moveSpeed
-      value: 20
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: waypoints.Array.data[0].point
@@ -1757,7 +1757,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: waypoints.Array.data[0].point
@@ -12906,7 +12906,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: waypoints.Array.data[0].point
@@ -22556,7 +22556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: waypoints.Array.data[0].point
@@ -22568,7 +22568,7 @@ PrefabInstance:
       objectReference: {fileID: 1305000804}
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: waypoints.Array.data[0].delayDuration
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2369137946121553056, guid: 3b5ed2c7aa2defa4db5d687c16f899bd, type: 3}
       propertyPath: waypoints.Array.data[1].delayDuration

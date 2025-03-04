@@ -22,6 +22,12 @@ public class CubeShape : Shape
         rb.drag = cubeWeight;
         if (!PerspectiveShift.curr3D)
             rb.rotation = Quaternion.Euler(0, 0, rb.rotation.z);
+        if (Mathf.Abs(rb.angularVelocity.x) > torqueCap){
+            rb.angularVelocity = new Vector3(torqueCap * Mathf.Sign(rb.angularVelocity.x), 0, 0);
+        }
+        if (Mathf.Abs(rb.angularVelocity.z) > torqueCap){
+            rb.angularVelocity = new Vector3(0, 0, torqueCap * Mathf.Sign(rb.angularVelocity.z));
+        }
         
     }
     IEnumerator OpenHelper(){
@@ -45,10 +51,10 @@ public class CubeShape : Shape
 
     public override void Move(Vector3 direction, bool curr3D){
         base.Move(direction, curr3D);
-        if (rb.angularVelocity.x < torqueCap){
+        if (Mathf.Abs(rb.angularVelocity.x) < torqueCap){
             rb.AddTorque(new Vector3(Input.GetAxis("Vertical") * torque * -1, 0, 0));
         }
-        if (rb.angularVelocity.z < torqueCap){
+        if (Mathf.Abs(rb.angularVelocity.z) < torqueCap){
             rb.AddTorque(new Vector3(0, 0, Input.GetAxis("Horizontal") * torque * -1));
         }
             

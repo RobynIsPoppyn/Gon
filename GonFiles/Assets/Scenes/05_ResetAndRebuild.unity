@@ -3370,9 +3370,13 @@ MonoBehaviour:
   musicSource: {fileID: 174741498}
   sfxSource: {fileID: 1677255258}
   uiSource: {fileID: 559647252}
+  ballRollSource: {fileID: 0}
   bgm: {fileID: 8300000, guid: 27d7904c362378848b27993233773d0a, type: 3}
   uiHover: {fileID: 8300000, guid: bbfd3addb8825174182904eb79c6781e, type: 3}
   uiSelect: {fileID: 8300000, guid: e6477daa6df03204e872d555d0ec81e2, type: 3}
+  playerSwap: {fileID: 0}
+  playerSmashCollision: {fileID: 0}
+  barrierBreak: {fileID: 0}
 --- !u!4 &1708094226
 Transform:
   m_ObjectHideFlags: 0

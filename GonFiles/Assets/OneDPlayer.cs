@@ -31,10 +31,5 @@ public class OneDPlayer : MonoBehaviour
             rb.AddForce(new Vector2(speed * input, 0));
         if (rb.angularVelocity < torqueCap)
             rb.AddTorque(-1 * torque * input);
-
-        if (Mathf.Approximately(input, 0f))
-            rb.drag = 4f;
-        else
-            rb.drag = 0.1f;
     }
 }

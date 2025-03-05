@@ -227,6 +227,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 1739246645}
   uiSlider: {fileID: 1216402608}
   qualityDrop: {fileID: 0}
+  fullscreenToggle: {fileID: 0}
   resolutionDropdown: {fileID: 1366576211}
 --- !u!1 &10168458
 GameObject:
@@ -1986,8 +1987,8 @@ Transform:
   m_GameObject: {fileID: 144364648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48.1136, y: -8.2188, z: 0}
-  m_LocalScale: {x: 88.6941, y: 13.762377, z: 5}
+  m_LocalPosition: {x: 48.0614, y: -8.2392, z: 0}
+  m_LocalScale: {x: 88.58697, y: 13.803545, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1473020274}
@@ -23072,6 +23073,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 1124383492}
   uiSlider: {fileID: 1765846022}
   qualityDrop: {fileID: 0}
+  fullscreenToggle: {fileID: 0}
   resolutionDropdown: {fileID: 839776926}
 --- !u!114 &1277513714 stripped
 MonoBehaviour:

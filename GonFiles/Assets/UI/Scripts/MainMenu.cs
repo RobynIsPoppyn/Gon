@@ -35,6 +35,18 @@ public class MainMenu : MonoBehaviour
     {
         PlayLogoParticlesAtButtonPosition();
         player.GetComponent<PlayerMovement>().enabled = false;
+
+        // Set Graphics Quality
+        QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("graphicsQuality", 3));
+
+        // Set Fullscreen
+        bool isFullscreen = PlayerPrefs.GetInt("fullscreen", 1) == 1;
+        Screen.fullScreen = isFullscreen;
+
+        // Set Saved Resolution
+        int savedRes = PlayerPrefs.GetInt("resolutionIndex", Screen.resolutions.Length - 1);
+        Resolution res = Screen.resolutions[savedRes];
+        Screen.SetResolution(res.width, res.height, isFullscreen);
     }
 
     // Update is called once per frame

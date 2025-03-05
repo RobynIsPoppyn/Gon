@@ -226,6 +226,8 @@ MonoBehaviour:
   musicSlider: {fileID: 833301866}
   sfxSlider: {fileID: 1739246645}
   uiSlider: {fileID: 1216402608}
+  qualityDrop: {fileID: 1349999103}
+  fullscreenToggle: {fileID: 630157421}
   resolutionDropdown: {fileID: 1366576211}
 --- !u!1 &10168458
 GameObject:
@@ -8673,7 +8675,7 @@ MonoBehaviour:
       - m_Target: {fileID: 5409901}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
         m_MethodName: SetFullscreen
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -23070,6 +23072,8 @@ MonoBehaviour:
   musicSlider: {fileID: 1937762474}
   sfxSlider: {fileID: 1124383492}
   uiSlider: {fileID: 1765846022}
+  qualityDrop: {fileID: 322953591}
+  fullscreenToggle: {fileID: 816657053}
   resolutionDropdown: {fileID: 839776926}
 --- !u!114 &1277513714 stripped
 MonoBehaviour:
@@ -23835,7 +23839,7 @@ MonoBehaviour:
       - m_Target: {fileID: 5409901}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
         m_MethodName: SetQuality
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24115,7 +24119,7 @@ MonoBehaviour:
       - m_Target: {fileID: 5409901}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
         m_MethodName: SetResolution
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

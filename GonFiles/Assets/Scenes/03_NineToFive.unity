@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17313099, g: 0.21638887, b: 0.29840496, a: 1}
+  m_IndirectSpecularColor: {r: 0.17313069, g: 0.21638823, b: 0.29840386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5685,6 +5685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11375,6 +11379,18 @@ PrefabInstance:
     - target: {fileID: 2013836940259021185, guid: b2897fe1b4fedef4195f3b2e985e4a05, type: 3}
       propertyPath: isNew
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982324398626858304, guid: b2897fe1b4fedef4195f3b2e985e4a05, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509277844060474393, guid: b2897fe1b4fedef4195f3b2e985e4a05, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509277844060474393, guid: b2897fe1b4fedef4195f3b2e985e4a05, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23211,6 +23227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26257,7 +26277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.9144
+      value: -5.944
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalScale.y
@@ -29384,6 +29404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30030,6 +30054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30591,6 +30619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31690,6 +31722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33503,6 +33539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37064,19 +37104,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -37084,7 +37124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -37178,7 +37218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.812
+      value: -2.812
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_LocalScale.y
@@ -38477,6 +38517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38695,6 +38739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233192134099702285, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: acda8f6c9c38acd43aaed3f007ebc3a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

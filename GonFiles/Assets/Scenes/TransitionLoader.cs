@@ -37,7 +37,7 @@ public class TransitionLoader : MonoBehaviour
         AudioManager.instance.playSFX(AudioManager.instance.finishSound);
         SceneManager.LoadScene(levelIndex);
 
-        if (AudioManager.instance != null)
+        if (AudioManager.instance != null && newBg != null)
         {
             AudioManager.instance.ChangeBGM(newBg);
         }

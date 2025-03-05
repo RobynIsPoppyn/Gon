@@ -10,13 +10,9 @@ public class CamTrigger : MonoBehaviour
     [SerializeField] private string exitAnimName;
     [SerializeField] private bool destroyOnLeave = false;
 
-    private void Awake()
-    {
-        mCam = Camera.main;
-    }
-
     private void Start()
     {
+        mCam = Camera.main;
         mCamMethods = mCam.GetComponent<PerspectiveShift>();
     }
 
@@ -24,6 +20,7 @@ public class CamTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerCollision"))
         {
+            Debug.Log("HELLOO");
             mCamMethods.PlayTransition(enterAnimName);
         }
     }

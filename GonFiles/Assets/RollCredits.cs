@@ -19,6 +19,6 @@ public class RollCredits : MonoBehaviour
     {
         yield return new WaitForSeconds(20f);
 
-        loader.LoadNextLevel(5, null);
+        loader.LoadNextLevel(6, null);
     }
 }

@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: perception-box
       objectReference: {fileID: 0}
+    - target: {fileID: 6610814260049388489, guid: b8a459f33a9dfa54aba6311241da838b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

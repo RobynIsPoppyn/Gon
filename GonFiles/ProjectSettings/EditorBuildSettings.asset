@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/05_ResetAndRebuild.unity
     guid: 6167133a7bad5e54fbe719f5309d5cef
   - enabled: 1
+    path: Assets/Scenes/06_NewHorizons.unity
+    guid: 27ec5161f07dfcb4b872024ccb554e4c
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 8ec0d84d6ea25304faaef8c7db7805ef
   m_configObjects: {}

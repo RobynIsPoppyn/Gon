@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17313069, g: 0.21638823, b: 0.29840386, a: 1}
+  m_IndirectSpecularColor: {r: 0.17313099, g: 0.21638887, b: 0.29840496, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -479,6 +479,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_Name
       value: pillar-urban
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4812,6 +4816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pillar-urban (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5009,7 +5017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &341055917
 Transform:
   m_ObjectHideFlags: 0
@@ -5306,6 +5314,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
       propertyPath: m_Name
       value: ground-var2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9045,8 +9057,8 @@ Transform:
   m_GameObject: {fileID: 653789654}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.9, y: -49.6, z: 0}
-  m_LocalScale: {x: 22.147535, y: 102.7041, z: 5}
+  m_LocalPosition: {x: 104.4157, y: -39.6251, z: 0}
+  m_LocalScale: {x: 24.1701, y: 101.45276, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1473020274}
@@ -9994,6 +10006,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
       propertyPath: m_Name
       value: pillar-urban (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11765,7 +11781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &818649481
@@ -14921,6 +14937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground-var2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16132,6 +16152,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
       propertyPath: m_Name
       value: ground-var2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22491,6 +22515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground-var2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24828,6 +24856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground-var2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25122,6 +25154,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
       propertyPath: m_Name
       value: ground-var2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35587,6 +35623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground-var2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37326,6 +37366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pillar-urban (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a940d5d6e142e4da96be8a48511957, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37778,6 +37822,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
       propertyPath: m_Name
       value: ground-var2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5057067f5e8e15843ae5a9443f2a5b05, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

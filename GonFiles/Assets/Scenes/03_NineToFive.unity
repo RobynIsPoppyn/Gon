@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17313069, g: 0.21638823, b: 0.29840386, a: 1}
+  m_IndirectSpecularColor: {r: 0.17313099, g: 0.21638887, b: 0.29840496, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14823,7 +14823,7 @@ GameObject:
   - component: {fileID: 823792896}
   - component: {fileID: 823792895}
   - component: {fileID: 823792894}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38037,7 +38037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 753365071021007645, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.96
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 753365071021007645, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 753365071021007645, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38045,11 +38049,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202892490513789352, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_text
-      value: 'Here is your first task! You have 60s
+      value: 'Here is your first task!
 
 
-        Get this door open
-        by turning on ALL the lights'
+        Get this door open by turning on
+        ALL the lights.'
       objectReference: {fileID: 0}
     - target: {fileID: 2202892490513789352, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_fontSize

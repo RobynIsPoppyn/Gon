@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         PlayLogoParticlesAtButtonPosition();
-        player.GetComponent<PlayerMovement>().enabled = false;
+        StartCoroutine(delayPlayer());
 
         // Set Graphics Quality
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("graphicsQuality", 3));
@@ -47,6 +48,11 @@ public class MainMenu : MonoBehaviour
         int savedRes = PlayerPrefs.GetInt("resolutionIndex", Screen.resolutions.Length - 1);
         Resolution res = Screen.resolutions[savedRes];
         Screen.SetResolution(res.width, res.height, isFullscreen);
+    }
+
+    public IEnumerator delayPlayer(){
+        yield return new WaitForSeconds(0.5f);
+        player.GetComponent<PlayerMovement>().enabled = false;
     }
 
     // Update is called once per frame

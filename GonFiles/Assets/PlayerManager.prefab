@@ -476,7 +476,7 @@ MonoBehaviour:
   pm: {fileID: 0}
   cat: {fileID: 0}
   thresholdReached: 0
-  smashThreshold: 0.2
+  smashThreshold: 0.05
   downwardForce: 100
   smashing: 0
   smashSpeedCap: 2

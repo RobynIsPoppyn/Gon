@@ -44,7 +44,7 @@ public class CubeShape : Shape
     }
     public override void Action(){
     
-        if (!smashing && !m_slamInitiated){
+        if (!smashing && !m_slamInitiated && !grounded.isGrounded){
             rb.velocity = Vector3.zero; 
             m_slamInitiated = true;
             rb.rotation = Quaternion.Euler(0, rb.transform.eulerAngles.y, 0);

@@ -12,6 +12,7 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider uiSlider;
     [SerializeField] private TMP_Dropdown qualityDrop;
+    [SerializeField] private Toggle fullscreenToggle;
 
     private Resolution[] resolutions;
     public TMP_Dropdown resolutionDropdown;
@@ -44,7 +45,9 @@ public class VolumeSettings : MonoBehaviour
     private void OnEnable()
     {
         // Sync Dropdowns & Fullscreen
-        qualityDrop.value = PlayerPrefs.GetInt("graphicsQuality");
+        qualityDrop.value = PlayerPrefs.GetInt("graphicsQuality", 2);
+        fullscreenToggle.isOn = PlayerPrefs.GetInt("fullscreen", 1) == 1;
+        resolutionDropdown.value = PlayerPrefs.GetInt("resolutionIndex", Screen.resolutions.Length - 1);
 
         // Sync sliders with saved values when the settings menu is opened
         masterSlider.value = PlayerPrefs.GetFloat("masterVolume", 1f);
@@ -63,11 +66,13 @@ public class VolumeSettings : MonoBehaviour
     {
         Resolution res = resolutions[resIndex];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+        PlayerPrefs.SetInt("resolutionIndex", resIndex);
     }
 
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0);
     }
 
     public void SetMasterVolume()

@@ -17,7 +17,7 @@ public class NPCDialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             if (!m_initiated)
-                AudioManager.instance.playSFX(AudioManager.instance.npcSound);
+                AudioManager.instance.playSFX(AudioManager.instance.uiSelect);
             dialogueUI.CrossFadeAlpha(1f, 1f, false);
             m_initiated = true;
         }

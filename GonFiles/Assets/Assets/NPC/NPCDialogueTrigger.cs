@@ -11,12 +11,15 @@ public class NPCDialogueTrigger : MonoBehaviour
         dialogueUI.CrossFadeAlpha(0f, 0f, false);
     }
 
+    private bool m_initiated = false;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            AudioManager.instance.playSFX(AudioManager.instance.npcSound);
+            if (!m_initiated)
+                AudioManager.instance.playSFX(AudioManager.instance.npcSound);
             dialogueUI.CrossFadeAlpha(1f, 1f, false);
+            m_initiated = true;
         }
     }
 }

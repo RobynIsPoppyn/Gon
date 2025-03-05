@@ -51,7 +51,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public IEnumerator delayPlayer(){
-        yield return new WaitForSeconds(0.5f);
+        yield return null;
         player.GetComponent<PlayerMovement>().enabled = false;
     }
 

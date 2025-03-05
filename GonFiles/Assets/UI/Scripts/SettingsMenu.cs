@@ -11,6 +11,7 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider uiSlider;
+    [SerializeField] private TMP_Dropdown qualityDrop;
 
     private Resolution[] resolutions;
     public TMP_Dropdown resolutionDropdown;
@@ -42,6 +43,9 @@ public class VolumeSettings : MonoBehaviour
 
     private void OnEnable()
     {
+        // Sync Dropdowns & Fullscreen
+        qualityDrop.value = PlayerPrefs.GetInt("graphicsQuality");
+
         // Sync sliders with saved values when the settings menu is opened
         masterSlider.value = PlayerPrefs.GetFloat("masterVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 1f);
@@ -52,6 +56,7 @@ public class VolumeSettings : MonoBehaviour
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        PlayerPrefs.SetInt("graphicsQuality", qualityIndex);
     }
 
     public void SetResolution(int resIndex)

@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You've always made progress
+  m_text: You've always made progress.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4abd85a0e95bce54695897687900ad86, type: 2}
   m_sharedMaterial: {fileID: -6553517143142503284, guid: 4abd85a0e95bce54695897687900ad86, type: 2}
@@ -3058,7 +3058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No matter how many times you fail
+  m_text: No matter how many times you fail.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4abd85a0e95bce54695897687900ad86, type: 2}
   m_sharedMaterial: {fileID: -6553517143142503284, guid: 4abd85a0e95bce54695897687900ad86, type: 2}
@@ -3121,7 +3121,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -16.121082, w: -3.0770721}
+  m_margin: {x: 0, y: 0, z: -17.391705, w: -3.0770721}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -5310,7 +5310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202892490513789352, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_text
-      value: Welcome! Here's your first task. No rush, take your time.
+      value: Excited to have you on the team! Let's get started, no rush.
       objectReference: {fileID: 0}
     - target: {fileID: 2202892490513789352, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_fontSize

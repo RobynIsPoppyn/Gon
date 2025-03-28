@@ -1464,10 +1464,10 @@ MonoBehaviour:
   rend: {fileID: 7029511402481549174}
   pm: {fileID: 0}
   cat: {fileID: 0}
-  jumpForce: 300
-  sphereSpeedModifier: 100
+  jumpForce: 400
+  sphereSpeedModifier: 150
   torque: 1
-  horizontalSpeedCap: 4
+  horizontalSpeedCap: 5
   deacceleration: 10
   fanWeight: 1
   friction: 2

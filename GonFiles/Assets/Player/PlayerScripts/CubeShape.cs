@@ -21,6 +21,7 @@ public class CubeShape : Shape
         anim.Play("Base Layer.CubeOpen");
         StartCoroutine(OpenHelper());
         rb.drag = cubeWeight;
+        rb.velocity = new Vector3(0, 0, 0);
         if (!PerspectiveShift.curr3D)
             rb.rotation = Quaternion.Euler(0, 0, rb.rotation.z);
         if (Mathf.Abs(rb.angularVelocity.x) > torqueCap){

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17313099, g: 0.21638887, b: 0.29840496, a: 1}
+  m_IndirectSpecularColor: {r: 0.17313069, g: 0.21638823, b: 0.29840386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13568,12 +13568,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8050882260322104898, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_text
-      value: "BREAKABLE BARRIERS\nbroken by a slamming square -\npress SPACE to slam
-        \u2518"
+      value: "BREAKABLE BARRIERS\nbroken by a slamming square -\nwhile in the air,
+        press SPACE to slam \u2518"
       objectReference: {fileID: 0}
     - target: {fileID: 8050882260322104898, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_margin.x
-      value: -20.404034
+      value: -45.490215
       objectReference: {fileID: 0}
     - target: {fileID: 8050882260322104898, guid: 3eebe077ba7d8f3409fe4f42caf6aecc, type: 3}
       propertyPath: m_HorizontalAlignment

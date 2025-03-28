@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17313099, g: 0.21638887, b: 0.29840496, a: 1}
+  m_IndirectSpecularColor: {r: 0.17313069, g: 0.21638823, b: 0.29840386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1275,11 +1275,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1508453385158425583, guid: 65957cfa8d97bfd47addc079ab4ab8ae, type: 3}
       propertyPath: num
-      value: '[ 3 ]'
+      value: '[ 6 ]'
       objectReference: {fileID: 0}
     - target: {fileID: 1508453385158425583, guid: 65957cfa8d97bfd47addc079ab4ab8ae, type: 3}
       propertyPath: title
-      value: Nine-To-Five
+      value: New Horizons
       objectReference: {fileID: 0}
     - target: {fileID: 1656321374363735082, guid: 65957cfa8d97bfd47addc079ab4ab8ae, type: 3}
       propertyPath: m_Name
@@ -5018,15 +5018,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3888413063837520135, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.48
+      value: -4.88
       objectReference: {fileID: 0}
     - target: {fileID: 3888413063837520135, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.03
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 3888413063837520135, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.59
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 3888413063837520135, guid: a288c68b36a18a642a73cd8ff469c5cd, type: 3}
       propertyPath: m_LocalRotation.w
